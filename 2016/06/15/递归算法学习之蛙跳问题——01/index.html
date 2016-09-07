@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="生命不止,奋斗不止，coding不停。。。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="递归算法学习之蛙跳问题——01">
+<meta property="og:url" content="http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/index.html">
 <meta property="og:site_name" content="Duzhang">
-<meta property="og:description" content="生命不止,奋斗不止，coding不停。。。">
-<meta property="og:updated_time" content="2016-09-07T04:46:29.953Z">
+<meta property="og:description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。">
+<meta property="og:updated_time" content="2016-09-07T12:24:34.915Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="生命不止,奋斗不止，coding不停。。。">
+<meta name="twitter:title" content="递归算法学习之蛙跳问题——01">
+<meta name="twitter:description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。">
 
 
 
@@ -116,15 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/"/>
 
-  <title>
-  
-
-  
-    categories | Duzhang
-  
-</title>
+  <title> 递归算法学习之蛙跳问题——01 | Duzhang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,7 +139,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +259,120 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                递归算法学习之蛙跳问题——01
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-15T10:21:00+08:00" content="2016-06-15">
+              2016-06-15
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/15/递归算法学习之蛙跳问题——01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/15/递归算法学习之蛙跳问题——01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/06/算法学习之递归算法学习之斐波拉契/" rel="prev" title="算法学习">
+                算法学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -278,8 +383,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="categories/index.html"
-           data-title="categories" data-url="http://yoursite.com/categories/index.html">
+      <div class="ds-thread" data-thread-key="2016/06/15/递归算法学习之蛙跳问题——01/"
+           data-title="递归算法学习之蛙跳问题——01" data-url="http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/">
       </div>
     
   </div>
@@ -303,8 +408,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/upload/image/qq.jpg"
@@ -347,6 +461,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -443,6 +568,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
