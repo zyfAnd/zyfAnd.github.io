@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/404.html</loc>
+    
+    <lastmod>2016-09-07T13:12:42.007Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2016-09-07T12:38:37.592Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2016/09/07/%E5%B1%B1%E6%B0%B4%E9%A3%8E%E6%99%AF/</loc>
     
     <lastmod>2016-09-07T12:18:32.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/404.html</loc>
-    
-    <lastmod>2016-09-07T05:00:12.791Z</lastmod>
     
   </url>
   
