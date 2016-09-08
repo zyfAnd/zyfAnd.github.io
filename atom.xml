@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://zyfand.github.io/"/>
   <updated>2016-09-08T06:46:11.341Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://zyfand.github.io/</id>
   
   <author>
     <name>zyf&amp;&amp;JJ</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Android学习之ListView的优化01</title>
-    <link href="http://yoursite.com/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BListView/"/>
-    <id>http://yoursite.com/2016/09/08/Android学习之ListView/</id>
+    <link href="https://zyfand.github.io/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BListView/"/>
+    <id>https://zyfand.github.io/2016/09/08/Android学习之ListView/</id>
     <published>2016-09-08T02:52:32.000Z</published>
     <updated>2016-09-08T06:46:11.341Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Android学习之Activity</title>
-    <link href="http://yoursite.com/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BActivity/"/>
-    <id>http://yoursite.com/2016/09/08/Android学习之Activity/</id>
+    <link href="https://zyfand.github.io/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BActivity/"/>
+    <id>https://zyfand.github.io/2016/09/08/Android学习之Activity/</id>
     <published>2016-09-08T02:15:33.000Z</published>
     <updated>2016-09-08T02:23:02.447Z</updated>
     
@@ -84,8 +84,8 @@
   
   <entry>
     <title>山水风景</title>
-    <link href="http://yoursite.com/2016/09/07/%E5%B1%B1%E6%B0%B4%E9%A3%8E%E6%99%AF/"/>
-    <id>http://yoursite.com/2016/09/07/山水风景/</id>
+    <link href="https://zyfand.github.io/2016/09/07/%E5%B1%B1%E6%B0%B4%E9%A3%8E%E6%99%AF/"/>
+    <id>https://zyfand.github.io/2016/09/07/山水风景/</id>
     <published>2016-09-07T11:39:07.000Z</published>
     <updated>2016-09-07T12:18:32.432Z</updated>
     
@@ -106,8 +106,8 @@
   
   <entry>
     <title>算法学习之递归算法学习之斐波拉契</title>
-    <link href="http://yoursite.com/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
-    <id>http://yoursite.com/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
+    <link href="https://zyfand.github.io/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
+    <id>https://zyfand.github.io/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
     <published>2016-06-15T02:21:00.000Z</published>
     <updated>2016-09-08T02:28:16.644Z</updated>
     
@@ -128,8 +128,8 @@
   
   <entry>
     <title>递归算法学习之蛙跳问题——01</title>
-    <link href="http://yoursite.com/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
-    <id>http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/</id>
+    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
+    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
     <published>2016-06-15T02:21:00.000Z</published>
     <updated>2016-09-07T12:24:34.915Z</updated>
     
