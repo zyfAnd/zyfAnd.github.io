@@ -86,28 +86,18 @@
 
 
 
-<meta name="description" content="一个爱好android开发的小码农,目前大四，还在上海实习。
-希望这一年我的技术能有一个质的飞跃。敬请期待…
-邮箱:zhangyanfu66@gmail.com
-CSDN:http://blog.csdn.net/java_xmn
-github:https://github.com/zyfAnd">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="Listview的优化：1.重用convertView2.编写ViewHolder内部类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android学习之ListView的优化01">
+<meta property="og:url" content="http://yoursite.com/2016/09/08/Android学习之ListView/index.html">
 <meta property="og:site_name" content="Duzhang">
-<meta property="og:description" content="一个爱好android开发的小码农,目前大四，还在上海实习。
-希望这一年我的技术能有一个质的飞跃。敬请期待…
-邮箱:zhangyanfu66@gmail.com
-CSDN:http://blog.csdn.net/java_xmn
-github:https://github.com/zyfAnd">
-<meta property="og:updated_time" content="2016-09-07T12:38:37.592Z">
+<meta property="og:description" content="Listview的优化：1.重用convertView2.编写ViewHolder内部类">
+<meta property="og:image" content="http://yoursite.com/listview.gif">
+<meta property="og:updated_time" content="2016-09-08T05:31:38.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="一个爱好android开发的小码农,目前大四，还在上海实习。
-希望这一年我的技术能有一个质的飞跃。敬请期待…
-邮箱:zhangyanfu66@gmail.com
-CSDN:http://blog.csdn.net/java_xmn
-github:https://github.com/zyfAnd">
+<meta name="twitter:title" content="Android学习之ListView的优化01">
+<meta name="twitter:description" content="Listview的优化：1.重用convertView2.编写ViewHolder内部类">
+<meta name="twitter:image" content="http://yoursite.com/listview.gif">
 
 
 
@@ -128,15 +118,9 @@ github:https://github.com/zyfAnd">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/08/Android学习之ListView/"/>
 
-  <title>
-  
-
-  
-    about | Duzhang
-  
-</title>
+  <title> Android学习之ListView的优化01 | Duzhang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +141,7 @@ github:https://github.com/zyfAnd">
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,14 +261,122 @@ github:https://github.com/zyfAnd">
 
   <div id="posts" class="posts-expand">
     
-    
-      <p>一个爱好android开发的小码农,目前大四，还在上海实习。</p>
-<p>希望这一年我的技术能有一个质的飞跃。敬请期待…</p>
-<p>邮箱:zhangyanfu66@gmail.com</p>
-<p>CSDN:<a href="http://blog.csdn.net/java_xmn" target="_blank" rel="external">http://blog.csdn.net/java_xmn</a></p>
-<p>github:<a href="https://github.com/zyfAnd" target="_blank" rel="external">https://github.com/zyfAnd</a></p>
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android学习之ListView的优化01
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-08T10:52:32+08:00" content="2016-09-08">
+              2016-09-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/08/Android学习之ListView/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/Android学习之ListView/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Listview的优化：<br>1.重用convertView<br>2.编写ViewHolder内部类<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">public View getView(int i, View convertView, ViewGroup viewGroup) &#123;</div><div class="line">        ViewHolder viewHolder = null;</div><div class="line">        View view;</div><div class="line">        if(convertView==null)</div><div class="line">        &#123;</div><div class="line">            viewHolder = new ViewHolder();</div><div class="line">            view = View.inflate(mContext,R.layout.item_list,null);</div><div class="line">            viewHolder.mImageView = (ImageView) view.findViewById(R.id.id_iv);</div><div class="line">            viewHolder.mTextViewDes = (TextView) view.findViewById(R.id.id_tv_description);</div><div class="line">            viewHolder.getmTextViewPrice = (TextView) view.findViewById(R.id.id_tv_price);</div><div class="line">            view.setTag(viewHolder);</div><div class="line">        &#125;else&#123;</div><div class="line">            view = convertView;</div><div class="line">            viewHolder = (ViewHolder) view.getTag();</div><div class="line">        &#125;</div><div class="line">        viewHolder.mImageView.setImageResource(mList.get(i).image);</div><div class="line">        viewHolder.mTextViewDes.setText(mList.get(i).des);</div><div class="line">        viewHolder.getmTextViewPrice.setText(mList.get(i).price);</div><div class="line">        return view;</div><div class="line">    &#125;</div><div class="line">    class ViewHolder&#123;</div><div class="line">        public ImageView mImageView;</div><div class="line">        public TextView mTextViewDes;</div><div class="line">        public TextView getmTextViewPrice;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>这样是listview华东起来更流畅，效果图如下:</p>
+<p><img src="/listview.gif" alt="Alt text"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/08/Android学习之Activity/" rel="next" title="Android学习之Activity">
+                <i class="fa fa-chevron-left"></i> Android学习之Activity
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -295,8 +387,8 @@ github:https://github.com/zyfAnd">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="about/index.html"
-           data-title="about" data-url="http://yoursite.com/about/index.html">
+      <div class="ds-thread" data-thread-key="2016/09/08/Android学习之ListView/"
+           data-title="Android学习之ListView的优化01" data-url="http://yoursite.com/2016/09/08/Android学习之ListView/">
       </div>
     
   </div>
@@ -320,8 +412,17 @@ github:https://github.com/zyfAnd">
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/upload/image/qq.jpg"
@@ -364,6 +465,17 @@ github:https://github.com/zyfAnd">
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -460,6 +572,10 @@ github:https://github.com/zyfAnd">
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
