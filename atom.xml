@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-07T12:18:32.432Z</updated>
+  <updated>2016-09-08T02:16:22.552Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android学习之Activity</title>
+    <link href="http://yoursite.com/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BActivity/"/>
+    <id>http://yoursite.com/2016/09/08/Android学习之Activity/</id>
+    <published>2016-09-08T02:15:33.000Z</published>
+    <updated>2016-09-08T02:16:22.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>###在该博客上书写的第一篇博文</p>
+<hr>
+<p>读《第一行代码》的读书笔记</p>
+<p>活动</p>
+<p>经过学习了解到android系统使用的是任务（Task）来管理活动，一个Task就是存放在栈里的活动中的集合。栈这种数据结构是先进后出的，在默认的启动模式下，我们每启动一个活动就它就会处于返回栈的栈顶的位置上。当我们按下back键时或者调用finish方法时，处于栈顶位置活动就会出栈，这时前一个入栈的活动就会处于栈顶的位置。系统会把处于栈顶的活动展示给用户。</p>
+<p>活动的的状态</p>
+<p>运行状态</p>
+<p>活动处于栈顶状态，系统最不愿意回收处于运行状态的活动</p>
+<p>暂停状态</p>
+<p>当活动不再处于栈顶位置时，但任然可见，这时活动就处于暂停状态</p>
+<p>不处于栈顶为什么该活动还可见呢？那是因为不是每一个活动都需要占满整个屏幕，比如对话框式的活动就会仅仅占据屏幕的一部分，处于暂停状态的活动任然完全存活。</p>
+<p>停止状态</p>
+<p>当一个活动不再处于栈顶的位置，并且不可见的时候就进入停止状态。系统任然会为该活动保存相应的状态和成员变量。</p>
+<p>销毁状态</p>
+<p>当一个活动从返回栈中移除后变成了销毁状态，系统最倾向于销毁这种状态的活动。</p>
+<p>活动的生命周期</p>
+<p>Activity类中定义七个回调的方法，覆盖了活动生命周期的每一个环节</p>
+<p>onCreate()</p>
+<p>在活动被创建的时候调用该方法，在该方法中完成一些初始化的操作，比如加载布局，绑定数据等操作。</p>
+<p>onStart()</p>
+<p>这个方法在活动又不可见变为可见的时候调用</p>
+<p>onResume()</p>
+<p>这个方法在准备好和用户进行交互的时候调用。此时活动一定处于返回栈的栈顶，并处于运行状态</p>
+<p>onPause()</p>
+<p>这个方法在系统准备去启动或者恢复一个活动的时候调用。我们通常会在这个方法中将一些消耗cpu资源释放掉，以及保存一些关键数据，但这个方法的执行速度一定要快，不然会影响到新的栈顶活动的使用。</p>
+<p>onStop()</p>
+<p>这个方法在活动完全不可见的时候调用。它还和onPause()方法的主要区别在于，如果启动的新活动是一个对话框的活动，那么onPause()方法会得到执行，而onStop()方法并不会执行。</p>
+<p>onDestory()</p>
+<p>这个方法在活动被销毁之前调用，之后活动的状态就变为销毁状态。</p>
+<p>onRestart()</p>
+<p>这个方法在活动由停止状态之前调用，也就是活动被重新启动了。</p>
+<p>这七个方法是两两对应的（除了onRestart）</p>
+<p>将活动分为三种生命周期</p>
+<p>1.完整生存期</p>
+<p>活动在onCreate() 和 onDestory() 方法之间所经历的，就是完整的生存周期</p>
+<p>2.可见生命周期</p>
+<p>onStart() 和 onStop方法之间所经历的，就是可见的生存周期</p>
+<p>3.前台生命周期</p>
+<p>onResume() 和 onPause() 方法之间所经历的，在这段生命周期内的活动可以和用户进行交互。此时活动处于与运行状态。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###在该博客上书写的第一篇博文&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;读《第一行代码》的读书笔记&lt;/p&gt;
+&lt;p&gt;活动&lt;/p&gt;
+&lt;p&gt;经过学习了解到android系统使用的是任务（Task）来管理活动，一个Task就是存放在栈里的活动中的集合。栈这种数据结构是先进后出的，在默认的启动模式
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>山水风景</title>
@@ -38,25 +99,6 @@
   </entry>
   
   <entry>
-    <title>递归算法学习之蛙跳问题——01</title>
-    <link href="http://yoursite.com/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
-    <id>http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/</id>
-    <published>2016-06-15T02:21:00.000Z</published>
-    <updated>2016-09-07T12:24:34.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>算法学习之递归算法学习之斐波拉契</title>
     <link href="http://yoursite.com/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
     <id>http://yoursite.com/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
@@ -72,6 +114,25 @@
     <summary type="html">
     
       &lt;p&gt;输出Fibonacci的第n项，要求时间复杂度要低&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>递归算法学习之蛙跳问题——01</title>
+    <link href="http://yoursite.com/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
+    <id>http://yoursite.com/2016/06/15/递归算法学习之蛙跳问题——01/</id>
+    <published>2016-06-15T02:21:00.000Z</published>
+    <updated>2016-09-07T12:24:34.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
     
     </summary>
     
