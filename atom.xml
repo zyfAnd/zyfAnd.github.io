@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zyfand.github.io/"/>
-  <updated>2016-09-08T12:19:58.931Z</updated>
+  <updated>2016-09-08T12:53:44.783Z</updated>
   <id>https://zyfand.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo使用markdown掺入本地图片</title>
+    <link href="https://zyfand.github.io/2016/09/08/hexo%E4%BD%BF%E7%94%A8markdown%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
+    <id>https://zyfand.github.io/2016/09/08/hexo使用markdown插入本地图片/</id>
+    <published>2016-09-08T12:33:15.000Z</published>
+    <updated>2016-09-08T12:53:44.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传</p>
+<p>之前使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">图片连接相对路径出了点问题</div><div class="line">还有就是每次在使用git上传的时候我先用了hexo clean 清理一下本地缓存，导入之前导入的图片被清理掉，所以每次要在hexo clean 之后在导入图片到public文件下（public文件夹是在hexo generate之后生成的）.</div><div class="line">```相对路径的正确写法应该为:![本地图片](../../../../image/listview.gif)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传&lt;/p&gt;
+&lt;p&gt;之前使用&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div clas
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Android学习之ListView的优化01</title>
@@ -105,25 +128,6 @@
   </entry>
   
   <entry>
-    <title>递归算法学习之蛙跳问题——01</title>
-    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
-    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
-    <published>2016-06-15T02:21:00.000Z</published>
-    <updated>2016-09-07T12:24:34.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>算法学习之递归算法学习之斐波拉契</title>
     <link href="https://zyfand.github.io/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
     <id>https://zyfand.github.io/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
@@ -139,6 +143,25 @@
     <summary type="html">
     
       &lt;p&gt;输出Fibonacci的第n项，要求时间复杂度要低&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>递归算法学习之蛙跳问题——01</title>
+    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
+    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
+    <published>2016-06-15T02:21:00.000Z</published>
+    <updated>2016-09-07T12:24:34.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
     
     </summary>
     
