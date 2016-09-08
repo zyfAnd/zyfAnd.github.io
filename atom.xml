@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zyfand.github.io/"/>
-  <updated>2016-09-08T06:46:11.341Z</updated>
+  <updated>2016-09-08T12:06:31.997Z</updated>
   <id>https://zyfand.github.io/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://zyfand.github.io/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BListView/"/>
     <id>https://zyfand.github.io/2016/09/08/Android学习之ListView/</id>
     <published>2016-09-08T02:52:32.000Z</published>
-    <updated>2016-09-08T06:46:11.341Z</updated>
+    <updated>2016-09-08T12:06:31.997Z</updated>
     
     <content type="html"><![CDATA[<p>Listview的优化：<br>1.重用convertView<br>2.编写ViewHolder内部类<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">public View getView(int i, View convertView, ViewGroup viewGroup) &#123;</div><div class="line">        ViewHolder viewHolder = null;</div><div class="line">        View view;</div><div class="line">        if(convertView==null)</div><div class="line">        &#123;</div><div class="line">            viewHolder = new ViewHolder();</div><div class="line">            view = View.inflate(mContext,R.layout.item_list,null);</div><div class="line">            viewHolder.mImageView = (ImageView) view.findViewById(R.id.id_iv);</div><div class="line">            viewHolder.mTextViewDes = (TextView) view.findViewById(R.id.id_tv_description);</div><div class="line">            viewHolder.getmTextViewPrice = (TextView) view.findViewById(R.id.id_tv_price);</div><div class="line">            view.setTag(viewHolder);</div><div class="line">        &#125;else&#123;</div><div class="line">            view = convertView;</div><div class="line">            viewHolder = (ViewHolder) view.getTag();</div><div class="line">        &#125;</div><div class="line">        viewHolder.mImageView.setImageResource(mList.get(i).image);</div><div class="line">        viewHolder.mTextViewDes.setText(mList.get(i).des);</div><div class="line">        viewHolder.getmTextViewPrice.setText(mList.get(i).price);</div><div class="line">        return view;</div><div class="line">    &#125;</div><div class="line">    class ViewHolder&#123;</div><div class="line">        public ImageView mImageView;</div><div class="line">        public TextView mTextViewDes;</div><div class="line">        public TextView getmTextViewPrice;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <p>这样是listview华东起来更流畅，效果图如下:</p>
-<p><img src="/listview.gif" alt="Alt text"></p>
+<p><img src="/public/images/listview.gif" alt="使用本地图片"></p>
 ]]></content>
     
     <summary type="html">
