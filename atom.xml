@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-08T02:21:13.794Z</updated>
+  <updated>2016-09-08T02:23:02.447Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2016/09/08/Android%E5%AD%A6%E4%B9%A0%E4%B9%8BActivity/"/>
     <id>http://yoursite.com/2016/09/08/Android学习之Activity/</id>
     <published>2016-09-08T02:15:33.000Z</published>
-    <updated>2016-09-08T02:21:13.794Z</updated>
+    <updated>2016-09-08T02:23:02.447Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在该博客上书写的第一篇博文"><a href="#在该博客上书写的第一篇博文" class="headerlink" title="在该博客上书写的第一篇博文"></a>在该博客上书写的第一篇博文</h2><p>读《第一行代码》的读书笔记</p>
-<p>##活动</p>
+<p>##活动<br><a id="more"></a></p>
 <p>经过学习了解到android系统使用的是任务（Task）来管理活动，一个Task就是存放在栈里的活动中的集合。栈这种数据结构是先进后出的，在默认的启动模式下，我们每启动一个活动就它就会处于返回栈的栈顶的位置上。当我们按下back键时或者调用finish方法时，处于栈顶位置活动就会出栈，这时前一个入栈的活动就会处于栈顶的位置。系统会把处于栈顶的活动展示给用户。</p>
 <p>###活动的的状态</p>
 <p>###运行状态</p>
@@ -54,7 +54,7 @@
     <summary type="html">
     
       &lt;h2 id=&quot;在该博客上书写的第一篇博文&quot;&gt;&lt;a href=&quot;#在该博客上书写的第一篇博文&quot; class=&quot;headerlink&quot; title=&quot;在该博客上书写的第一篇博文&quot;&gt;&lt;/a&gt;在该博客上书写的第一篇博文&lt;/h2&gt;&lt;p&gt;读《第一行代码》的读书笔记&lt;/p&gt;
-&lt;p&gt;##活动&lt;
+&lt;p&gt;##活动&lt;br&gt;
     
     </summary>
     
