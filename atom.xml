@@ -88,7 +88,7 @@
     <link href="http://yoursite.com/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
     <id>http://yoursite.com/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
     <published>2016-06-15T02:21:00.000Z</published>
-    <updated>2016-09-08T02:25:02.220Z</updated>
+    <updated>2016-09-08T02:28:16.644Z</updated>
     
     <content type="html"><![CDATA[<p>输出Fibonacci的第n项，要求时间复杂度要低<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public int  fibonacci(int n)</div><div class="line">&#123;</div><div class="line">if(n&lt;0) return 0;</div><div class="line">  if(n&lt;=2) return 1;</div><div class="line">  else&#123;</div><div class="line">      return fibonacci(n-1)+fibonacci(n-2);</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
 <p>但是这种递归方法的时间复杂度太高</p>
