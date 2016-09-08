@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zyfand.github.io/"/>
-  <updated>2016-09-08T12:53:44.783Z</updated>
+  <updated>2016-09-08T12:57:36.678Z</updated>
   <id>https://zyfand.github.io/</id>
   
   <author>
@@ -20,18 +20,16 @@
     <link href="https://zyfand.github.io/2016/09/08/hexo%E4%BD%BF%E7%94%A8markdown%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
     <id>https://zyfand.github.io/2016/09/08/hexo使用markdown插入本地图片/</id>
     <published>2016-09-08T12:33:15.000Z</published>
-    <updated>2016-09-08T12:53:44.783Z</updated>
+    <updated>2016-09-08T12:57:36.678Z</updated>
     
     <content type="html"><![CDATA[<p>由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传</p>
-<p>之前使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">图片连接相对路径出了点问题</div><div class="line">还有就是每次在使用git上传的时候我先用了hexo clean 清理一下本地缓存，导入之前导入的图片被清理掉，所以每次要在hexo clean 之后在导入图片到public文件下（public文件夹是在hexo generate之后生成的）.</div><div class="line">```相对路径的正确写法应该为:![本地图片](../../../../image/listview.gif)</div></pre></td></tr></table></figure>
+<p>之前使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">图片连接相对路径出了点问题</div><div class="line"></div><div class="line">还有就是每次在使用git上传的时候我先用了hexo clean 清理一下本地缓存，</div><div class="line">导入之前导入的图片被清理掉，所以每次要在hexo clean 之后在导入图片</div><div class="line">到public文件下（public文件夹是在hexo generate之后生成的）.</div><div class="line"></div><div class="line">```相对路径的正确写法应该为:![本地图片](../../../../image/listview.gif)</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传&lt;/p&gt;
-&lt;p&gt;之前使用&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div clas
+&lt;p&gt;之前使用&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;li
     
     </summary>
     
