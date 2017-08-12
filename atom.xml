@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zyfand.github.io/"/>
-  <updated>2017-08-12T08:39:35.481Z</updated>
+  <updated>2016-09-13T14:26:58.372Z</updated>
   <id>https://zyfand.github.io/</id>
   
   <author>
@@ -14,26 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>2017-renew</title>
-    <link href="https://zyfand.github.io/2017/08/12/2017-renew/"/>
-    <id>https://zyfand.github.io/2017/08/12/2017-renew/</id>
-    <published>2017-08-12T06:40:24.000Z</published>
-    <updated>2017-08-12T08:39:35.481Z</updated>
-    
-    <content type="html"><![CDATA[<p>#2017 ，重新开始<br><img src="http://zyfand.qiniudn.com/upload_image/write.jpg" alt="test"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#2017 ，重新开始&lt;br&gt;&lt;img src=&quot;http://zyfand.qiniudn.com/upload_image/write.jpg&quot; alt=&quot;test&quot;&gt;&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>解决win7电脑网络连接异常的问题</title>
@@ -51,25 +31,6 @@
     
       &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;1.首先，打开电脑,网络连接图标出现红色的叉子,说明网络适配器有问题&lt;br&gt;2.打开网络共享中心-&amp;gt;更改是配置设置-&amp;gt;看到WLAN(或者叫无线连接)和本地连接。&lt;br&gt;&lt;img src=&quot;../../../../images/
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo使用markdown掺入本地图片</title>
-    <link href="https://zyfand.github.io/2016/09/08/hexo%E4%BD%BF%E7%94%A8markdown%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/"/>
-    <id>https://zyfand.github.io/2016/09/08/hexo使用markdown插入本地图片/</id>
-    <published>2016-09-08T12:33:15.000Z</published>
-    <updated>2016-09-08T12:59:28.577Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传<br><a id="more"></a><br>之前使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">图片连接相对路径出了点问题</div><div class="line"></div><div class="line">还有就是每次在使用git上传的时候我先用了hexo clean 清理一下本地缓存，</div><div class="line">导入之前导入的图片被清理掉，所以每次要在hexo clean 之后在导入图片</div><div class="line">到public文件下（public文件夹是在hexo generate之后生成的）.</div><div class="line"></div><div class="line">```相对路径的正确写法应该为:![本地图片](../../../../image/listview.gif)</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于使用别人的图床不知道什么时候会挂掉，所以打算使用markdown插入本地图片然后上传&lt;br&gt;
     
     </summary>
     
@@ -137,28 +98,6 @@
     
       &lt;h2 id=&quot;在该博客上书写的第一篇博文&quot;&gt;&lt;a href=&quot;#在该博客上书写的第一篇博文&quot; class=&quot;headerlink&quot; title=&quot;在该博客上书写的第一篇博文&quot;&gt;&lt;/a&gt;在该博客上书写的第一篇博文&lt;/h2&gt;&lt;p&gt;读《第一行代码》的读书笔记&lt;/p&gt;
 &lt;p&gt;##活动&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>山水风景</title>
-    <link href="https://zyfand.github.io/2016/09/07/%E5%B1%B1%E6%B0%B4%E9%A3%8E%E6%99%AF/"/>
-    <id>https://zyfand.github.io/2016/09/07/山水风景/</id>
-    <published>2016-09-07T11:39:07.000Z</published>
-    <updated>2016-09-07T12:18:32.432Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p><img src="http://img02.tooopen.com/images/20151229/tooopen_sy_153057917287.jpg" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;http://img02.tooopen.com/images/20151229/tooopen_sy_153057917287.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
     
     </summary>
     
