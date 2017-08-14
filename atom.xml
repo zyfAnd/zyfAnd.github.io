@@ -40,9 +40,9 @@
     <link href="https://zyfand.github.io/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/"/>
     <id>https://zyfand.github.io/2017/08/12/JVM学习/</id>
     <published>2017-08-12T14:56:08.000Z</published>
-    <updated>2017-08-14T00:45:44.627Z</updated>
+    <updated>2017-08-14T00:48:45.665Z</updated>
     
-    <content type="html"><![CDATA[<p>#一、运行时数据区域</p>
+    <content type="html"><![CDATA[<p>#一、运行时数据区域<br><a id="more"></a></p>
 <p>##程序计数器(Program Counter Register)<br><em>1、线程私有
 </em>2、JAVA虚拟机规范中没有规定任何OutOfMemoryError</p>
 <p>##JAVA虚拟机栈（Java Virtual Machine Stacks）<br>1、线程私有<br>2、存储局部变量表<br>3、操作数栈<br>4、动态链接<br>5、方法出口</p>
@@ -55,10 +55,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;#一、运行时数据区域&lt;/p&gt;
-&lt;p&gt;##程序计数器(Program Counter Register)&lt;br&gt;&lt;em&gt;1、线程私有
-&lt;/em&gt;2、JAVA虚拟机规范中没有规定任何OutOfMemoryError&lt;/p&gt;
-&lt;p&gt;##JAVA虚拟机栈（Java Virtual 
+      &lt;p&gt;#一、运行时数据区域&lt;br&gt;
     
     </summary>
     
