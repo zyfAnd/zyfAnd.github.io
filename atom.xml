@@ -40,15 +40,25 @@
     <link href="https://zyfand.github.io/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/"/>
     <id>https://zyfand.github.io/2017/08/12/JVM学习/</id>
     <published>2017-08-12T14:56:08.000Z</published>
-    <updated>2017-08-12T14:57:06.016Z</updated>
+    <updated>2017-08-14T00:45:44.627Z</updated>
     
-    <content type="html"><![CDATA[<p>#运行时存储空间</p>
+    <content type="html"><![CDATA[<p>#一、运行时数据区域</p>
+<p>##程序计数器(Program Counter Register)<br><em>1、线程私有
+</em>2、JAVA虚拟机规范中没有规定任何OutOfMemoryError</p>
+<p>##JAVA虚拟机栈（Java Virtual Machine Stacks）<br>1、线程私有<br>2、存储局部变量表<br>3、操作数栈<br>4、动态链接<br>5、方法出口</p>
+<p>##本地方法栈</p>
+<p>##JAVA 堆</p>
+<p>##方法去</p>
+<p>##运行时常量池</p>
+<p>##直接内存</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;#运行时存储空间&lt;/p&gt;
-
+      &lt;p&gt;#一、运行时数据区域&lt;/p&gt;
+&lt;p&gt;##程序计数器(Program Counter Register)&lt;br&gt;&lt;em&gt;1、线程私有
+&lt;/em&gt;2、JAVA虚拟机规范中没有规定任何OutOfMemoryError&lt;/p&gt;
+&lt;p&gt;##JAVA虚拟机栈（Java Virtual 
     
     </summary>
     
@@ -149,25 +159,6 @@
   </entry>
   
   <entry>
-    <title>递归算法学习之蛙跳问题——01</title>
-    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
-    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
-    <published>2016-06-15T02:21:00.000Z</published>
-    <updated>2016-09-07T12:24:34.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>算法学习之递归算法学习之斐波拉契</title>
     <link href="https://zyfand.github.io/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
     <id>https://zyfand.github.io/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
@@ -187,6 +178,25 @@
     </summary>
     
       <category term="算法" scheme="https://zyfand.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>递归算法学习之蛙跳问题——01</title>
+    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
+    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
+    <published>2016-06-15T02:21:00.000Z</published>
+    <updated>2016-09-07T12:24:34.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
+    
+    </summary>
     
     
   </entry>
