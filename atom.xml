@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zyfand.github.io/"/>
-  <updated>2017-08-13T15:23:00.428Z</updated>
+  <updated>2017-08-14T05:22:05.250Z</updated>
   <id>https://zyfand.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Resume</title>
+    <link href="https://zyfand.github.io/2017/08/14/Resume/"/>
+    <id>https://zyfand.github.io/2017/08/14/Resume/</id>
+    <published>2017-08-14T05:05:35.000Z</published>
+    <updated>2017-08-14T05:22:05.250Z</updated>
+    
+    <content type="html"><![CDATA[<p>##Resume</p>
+<h1 id="姓名：余静"><a href="#姓名：余静" class="headerlink" title="姓名：余静"></a>姓名：余静</h1><h2 id="职位"><a href="#职位" class="headerlink" title="职位"></a>职位</h2><blockquote>
+<p>联系方式<br>邮箱：15201992093@163.com</p>
+<h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>/<em> 列举一下个人优势和特点 </em>/</p>
+</blockquote>
+<h3 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h3><p>/<em> 工作的经历和工作内容,注意要时间倒序 </em>/</p>
+<h3 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h3><p>/<em> 学校和专业等信息 </em>/</p>
+<h3 id="技术经历"><a href="#技术经历" class="headerlink" title="技术经历"></a>技术经历</h3><p>/<em> 不要单纯列出一堆技术名词，而是明确自己做过的事情，这样面试官比较容易对我的技术有个初步判断 </em>/</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##Resume&lt;/p&gt;
+&lt;h1 id=&quot;姓名：余静&quot;&gt;&lt;a href=&quot;#姓名：余静&quot; class=&quot;headerlink&quot; title=&quot;姓名：余静&quot;&gt;&lt;/a&gt;姓名：余静&lt;/h1&gt;&lt;h2 id=&quot;职位&quot;&gt;&lt;a href=&quot;#职位&quot; class=&quot;headerlink&quot; 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017-renew</title>
@@ -156,6 +183,25 @@
   </entry>
   
   <entry>
+    <title>递归算法学习之蛙跳问题——01</title>
+    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
+    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
+    <published>2016-06-15T02:21:00.000Z</published>
+    <updated>2016-09-07T12:24:34.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>算法学习之递归算法学习之斐波拉契</title>
     <link href="https://zyfand.github.io/2016/06/15/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91/"/>
     <id>https://zyfand.github.io/2016/06/15/算法学习之递归算法学习之斐波拉契/</id>
@@ -175,25 +221,6 @@
     </summary>
     
       <category term="算法" scheme="https://zyfand.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>递归算法学习之蛙跳问题——01</title>
-    <link href="https://zyfand.github.io/2016/06/15/%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%9B%99%E8%B7%B3%E9%97%AE%E9%A2%98%E2%80%94%E2%80%9401/"/>
-    <id>https://zyfand.github.io/2016/06/15/递归算法学习之蛙跳问题——01/</id>
-    <published>2016-06-15T02:21:00.000Z</published>
-    <updated>2016-09-07T12:24:34.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。<br><a id="more"></a><br>public void jumpFloor(int n)<br>{<br>    if(n&lt;=0) return 0;<br>    else if(n&lt;=2) return n;<br>    else{<br>       return jumpFloor(n-1)+jumpFloor(n-2);<br>    }<br>}<br>用递归的方式来接到题目<br>台阶数目：1 2 3 4 5 6<br>跳法种数：1 2 3 5 8 13<br>所以这满足斐波拉契的公式所以可以用递归来处理。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。&lt;br&gt;
-    
-    </summary>
     
     
   </entry>
