@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Arsip: 2016/9 | Duzhang</title>
+    <title>Centos_Nginx_configuration | Duzhang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="生命不止,奋斗不止，coding不停。。。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Duzhang">
-<meta property="og:url" content="https://zyfand.github.io/archives/2016/09/index.html">
+    <meta name="description" content="##Nginx: nginx 是一个用C语言编写的静态服务器。我们可以用它来做反向代理。 案例1： 一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。 例如全球都可以访问（当然天朝大不认还是上不了的..） www.google.com ，那么就可以用nginx做分发。在www.google.com 解析一台主机（例如110.110.100.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos_Nginx_configuration">
+<meta property="og:url" content="https://zyfand.github.io/2017/12/05/Centos-Nginx-configuration/index.html">
 <meta property="og:site_name" content="Duzhang">
-<meta property="og:description" content="生命不止,奋斗不止，coding不停。。。">
+<meta property="og:description" content="##Nginx: nginx 是一个用C语言编写的静态服务器。我们可以用它来做反向代理。 案例1： 一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。 例如全球都可以访问（当然天朝大不认还是上不了的..） www.google.com ，那么就可以用nginx做分发。在www.google.com 解析一台主机（例如110.110.100.2">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-05T03:49:35.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Duzhang">
-<meta name="twitter:description" content="生命不止,奋斗不止，coding不停。。。">
+<meta name="twitter:title" content="Centos_Nginx_configuration">
+<meta name="twitter:description" content="##Nginx: nginx 是一个用C语言编写的静态服务器。我们可以用它来做反向代理。 案例1： 一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。 例如全球都可以访问（当然天朝大不认还是上不了的..） www.google.com ，那么就可以用nginx做分发。在www.google.com 解析一台主机（例如110.110.100.2">
     
 
     
@@ -209,102 +210,260 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2016</h1>
-            </div>
+            <section id="main"><article id="post-Centos-Nginx-configuration" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/09/13/解决win7电脑网络连接异常的问题/">解决win7电脑网络连接异常的问题</a>
+        <h1 class="article-title" itemprop="name">
+            Centos_Nginx_configuration
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/09/13/解决win7电脑网络连接异常的问题/">
-            <time datetime="2016-09-13T12:35:40.000Z" itemprop="datePublished">2016-09-13</time>
+        <a href="/2017/12/05/Centos-Nginx-configuration/">
+            <time datetime="2017-12-05T03:48:26.000Z" itemprop="datePublished">2017-12-05</time>
         </a>
     </div>
 
 
-                    
-                    
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                        
+                        
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/09/08/Android学习之ListView/">Android学习之ListView的优化01</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>##Nginx:</p>
+<p>nginx 是一个用C语言编写的静态服务器。<br>我们可以用它来做反向代理。</p>
+<p>案例1：</p>
+<p>一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。</p>
+<p>例如全球都可以访问（当然天朝大不认还是上不了的..） www.google.com ，那么就可以用nginx做分发。在www.google.com 解析一台主机（例如110.110.100.23）, 当请求发到该主机的时候， 通过nginx分发到不同的其他服务器主机上， 这样就缓解了当前主机的压力。</p>
+<p>案例2:</p>
+<p>域名解析只能解析到ip， 不能解析到对应到ip主机对应的某一个端口号<br>所以你在主机上跑了一个应用是非80端口的，那么你访问你的应用的时候就要域名加上端口才能访问到。</p>
+<p>例如:www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。</p>
+<p>###安装Nginx </p>
+<p>####环境<br>操作系统Centos7.2</p>
+<p>安装命令:<code>yum install nginx</code></p>
+<p>启动命令:<code>nginx</code></p>
+<p>优雅启动命令:<code>nginx -s reload</code></p>
+<p>测试启动情况：<code>nginx -t</code></p>
+<p>重启nginx：<code>nginx -s reload</code></p>
+<p>针对案例2,需要添加一些配置</p>
+<p>在/etc/nginx/nginx.conf 有两个关键的地方:</p>
+<pre><code>user nginx; 改为 nginx root;
+</code></pre><p>若不改动， 会在你启动nginx的时候出现权限不允许的error。</p>
+<pre><code>include /etc/nginx/conf.d/*.conf;
+</code></pre><p>这个inclde的意思就是你在conf.d 文件下的所有的 *.conf 文件， 都会在nginx启动的时候加载进去。</p>
+<p>如果在/etc/nginx/下没有conf.d 文件夹，你可以创建conf.d文件夹。</p>
+<p>下创建一个自己的.conf配置文件， 或者你可以直接修改/etc/nginx/nginx.conf文件。</p>
+<p>我选择直接修改nginx.conf这个文件</p>
+<p>修改后的nginx.conf文件（我添加了HTTPS 配置）<br>SSL configuration:</p>
+<pre><code>user root;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/09/08/Android学习之ListView/">
-            <time datetime="2016-09-08T02:52:32.000Z" itemprop="datePublished">2016-09-08</time>
-        </a>
-    </div>
+
+include /usr/share/nginx/modules/*.conf;
+
+events {
+worker_connections 1024;
+}
+
+http {
+log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;
+
+access_log  /var/log/nginx/access.log  main;
+
+sendfileon;
+tcp_nopush  on;
+tcp_nodelay on;
+keepalive_timeout   65;
+types_hash_max_size 2048;
+
+include /etc/nginx/mime.types;
+default_typeapplication/octet-stream;
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
+include /etc/nginx/conf.d/*.conf;
 
-                    
-                </div>
-            </div>
+server {
+listen   80 default_server;
+listen   [::]:80 default_server;
+server_name  www.daliandaxue.cn;
+root /usr/share/nginx/html;
+
+include /etc/nginx/default.d/*.conf;
+
+location / {
+        rewrite ^(.*) https://$server_name$1 permanent;
+}
+
+error_page 404 /404.html;
+location = /40x.html {
+}
+
+error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+}
+}
+
+
+   server {
+   listen   443 ssl http2 default_server;
+   listen   [::]:443 ssl http2 default_server;
+server_name  www.daliandaxue.cn;
+root /usr/share/nginx/html;
+
+        ssl on;
+        ssl_certificate /etc/nginx/cert/214327484730823.pem;
+        ssl_certificate_key /etc/nginx/cert/214327484730823.key;
+        ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_prefer_server_ciphers on;
+
+
+include /etc/nginx/default.d/*.conf;
+
+location / {
+            proxy_pass  http://localhost:8443;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_redirect off; 
+            `### Most PHP, Python, Rails, Java App can use this header -&gt; https ###`
+            proxy_set_header X-Forwarded-Proto  $scheme;
+}
+
+    error_page 404 /404.html;
+    location = /40x.html {
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+    }
+}
+}
+</code></pre><p>配置完nginx.conf 文件之后，执行nginx -s reload 就可以通过域名直接访问你的应用了。<br>其中的原理就是nginx 监听了服务器主机的80端口。 当有请求通过你设置server_name 访问时，nginx就可以把该请求location 到你的应用上。</p>
+
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2016/09/08/Android学习之Activity/">Android学习之Activity</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/09/08/Android学习之Activity/">
-            <time datetime="2016-09-08T02:15:33.000Z" itemprop="datePublished">2016-09-08</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
 
-                    
-                </div>
-            </div>
-        </div>
-    
 </div>
+
+    <a data-url="https://zyfand.github.io/2017/12/05/Centos-Nginx-configuration/" data-id="cjat36rj00002rcvimsse61rl" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zyfand.github.io/2017/12/05/Centos-Nginx-configuration/#comments" class="article-comment-link">Komentar</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/08/13/2017-renew-1/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Lebih Tua</strong>
+            <div class="article-nav-title">2017-renew</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="uyan_frame"></div>
+</section>
+    
+
 </section>
             
                 
