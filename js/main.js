@@ -1,139 +1,63 @@
-/* eslint-disable node/no-unsupported-features/node-builtins */
-(function($, moment, ClipboardJS, config) {
-    $('.article img:not(".not-gallery-item")').each(function() {
-        // wrap images with link and add caption if possible
-        if ($(this).parent('a').length === 0) {
-            $(this).wrap('<a class="gallery-item" href="' + $(this).attr('src') + '"></a>');
-            if (this.alt) {
-                $(this).after('<p class="has-text-centered is-size-6 caption">' + this.alt + '</p>');
+(function($){
+    var toTop = ($('#sidebar').height() - $(window).height()) + 60;
+    // Caption
+    $('.article-entry').each(function(i) {
+        $(this).find('img').each(function() {
+            if (this.alt && !(!!$.prototype.justifiedGallery && $(this).parent('.justified-gallery').length)) {
+                $(this).after('<span class="caption">' + this.alt + '</span>');
             }
-        }
-    });
 
-    if (typeof $.fn.lightGallery === 'function') {
-        $('.article').lightGallery({ selector: '.gallery-item' });
-    }
-    if (typeof $.fn.justifiedGallery === 'function') {
-        if ($('.justified-gallery > p > .gallery-item').length) {
-            $('.justified-gallery > p > .gallery-item').unwrap();
-        }
-        $('.justified-gallery').justifiedGallery();
-    }
-
-    if (typeof moment === 'function') {
-        $('.article-meta time').each(function() {
-            $(this).text(moment($(this).attr('datetime')).fromNow());
-        });
-    }
-
-    $('.article > .content > table').each(function() {
-        if ($(this).width() > $(this).parent().width()) {
-            $(this).wrap('<div class="table-overflow"></div>');
-        }
-    });
-
-    function adjustNavbar() {
-        const navbarWidth = $('.navbar-main .navbar-start').outerWidth() + $('.navbar-main .navbar-end').outerWidth();
-        if ($(document).outerWidth() < navbarWidth) {
-            $('.navbar-main .navbar-menu').addClass('justify-content-start');
-        } else {
-            $('.navbar-main .navbar-menu').removeClass('justify-content-start');
-        }
-    }
-    adjustNavbar();
-    $(window).resize(adjustNavbar);
-
-    function toggleFold(codeBlock, isFolded) {
-        const $toggle = $(codeBlock).find('.fold i');
-        !isFolded ? $(codeBlock).removeClass('folded') : $(codeBlock).addClass('folded');
-        !isFolded ? $toggle.removeClass('fa-angle-right') : $toggle.removeClass('fa-angle-down');
-        !isFolded ? $toggle.addClass('fa-angle-down') : $toggle.addClass('fa-angle-right');
-    }
-
-    function createFoldButton(fold) {
-        return '<span class="fold">' + (fold === 'unfolded' ? '<i class="fas fa-angle-down"></i>' : '<i class="fas fa-angle-right"></i>') + '</span>';
-    }
-
-    $('figure.highlight table').wrap('<div class="highlight-body">');
-    if (typeof config !== 'undefined'
-        && typeof config.article !== 'undefined'
-        && typeof config.article.highlight !== 'undefined') {
-
-        $('figure.highlight').addClass('hljs');
-        $('figure.highlight .code .line span').each(function() {
-            const classes = $(this).attr('class').split(/\s+/);
-            if (classes.length === 1) {
-                $(this).addClass('hljs-' + classes[0]);
-                $(this).removeClass(classes[0]);
+            // 对于已经包含在链接内的图片不适用lightGallery
+            if ($(this).parent().prop("tagName") !== 'A') {
+                $(this).wrap('<a href="' + ($(this).attr("data-imgbig") ? $(this).attr("data-imgbig") : this.src) + '" title="' + this.alt + '" class="gallery-item"></a>');
             }
         });
+    });
+    if (typeof lightGallery != 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        $('.article-entry').each(function(i, entry) {
+            lightGallery(entry, options);
+        });
+        lightGallery($('.article-gallery')[0], options);
+    }
+    if (!!$.prototype.justifiedGallery) {  // if justifiedGallery method is defined
+        var options = {
+            rowHeight: 140,
+            margins: 4,
+            lastRow: 'justify'
+        };
+        $('.justified-gallery').justifiedGallery(options);
+    }
 
+    // Profile card
+    $(document).on('click', function () {
+        $('#profile').removeClass('card');
+    }).on('click', '#profile-anchor', function (e) {
+        e.stopPropagation();
+        $('#profile').toggleClass('card');
+    }).on('click', '.profile-inner', function (e) {
+        e.stopPropagation();
+    });
 
-        const clipboard = config.article.highlight.clipboard;
-        const fold = config.article.highlight.fold.trim();
-
-        $('figure.highlight').each(function() {
-            if ($(this).find('figcaption').length) {
-                $(this).find('figcaption').addClass('level is-mobile');
-                $(this).find('figcaption').append('<div class="level-left">');
-                $(this).find('figcaption').append('<div class="level-right">');
-                $(this).find('figcaption div.level-left').append($(this).find('figcaption').find('span'));
-                $(this).find('figcaption div.level-right').append($(this).find('figcaption').find('a'));
+    // To Top
+    if ($('#sidebar').length) {
+        $(document).on('scroll', function () {
+            if ($(document).width() >= 800) {
+                if(($(this).scrollTop() > toTop) && ($(this).scrollTop() > 0)) {
+                    $('#toTop').fadeIn();
+                    $('#toTop').css('left', $('#sidebar').offset().left);
+                } else {
+                    $('#toTop').fadeOut();
+                }
             } else {
-                if (clipboard || fold) {
-                    $(this).prepend('<figcaption class="level is-mobile"><div class="level-left"></div><div class="level-right"></div></figcaption>');
-                }
+                $('#toTop').fadeIn();
+                $('#toTop').css('right', 20);
             }
+        }).on('click', '#toTop', function () {
+            $('body, html').animate({ scrollTop: 0 }, 600);
         });
-
-        if (typeof ClipboardJS !== 'undefined' && clipboard) {
-            $('figure.highlight').each(function() {
-                const id = 'code-' + Date.now() + (Math.random() * 1000 | 0);
-                const button = '<a href="javascript:;" class="copy" title="Copy" data-clipboard-target="#' + id + ' .code"><i class="fas fa-copy"></i></a>';
-                $(this).attr('id', id);
-                $(this).find('figcaption div.level-right').append(button);
-            });
-            new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
-        }
-
-        if (fold) {
-            $('figure.highlight').each(function() {
-                $(this).addClass('foldable'); // add 'foldable' class as long as fold is enabled
-
-                if ($(this).find('figcaption').find('span').length > 0) {
-                    const span = $(this).find('figcaption').find('span');
-                    if (span[0].innerText.indexOf('>folded') > -1) {
-                        span[0].innerText = span[0].innerText.replace('>folded', '');
-                        $(this).find('figcaption div.level-left').prepend(createFoldButton('folded'));
-                        toggleFold(this, true);
-                        return;
-                    }
-                }
-                $(this).find('figcaption div.level-left').prepend(createFoldButton(fold));
-                toggleFold(this, fold === 'folded');
-            });
-
-            $('figure.highlight figcaption .level-left').click(function() {
-                const $code = $(this).closest('figure.highlight');
-                toggleFold($code.eq(0), !$code.hasClass('folded'));
-            });
-        }
     }
 
-    const $toc = $('#toc');
-    if ($toc.length > 0) {
-        const $mask = $('<div>');
-        $mask.attr('id', 'toc-mask');
-
-        $('body').append($mask);
-
-        function toggleToc() { // eslint-disable-line no-inner-declarations
-            $toc.toggleClass('is-active');
-            $mask.toggleClass('is-active');
-        }
-
-        $toc.on('click', toggleToc);
-        $mask.on('click', toggleToc);
-        $('.navbar-main .catalogue').on('click', toggleToc);
-    }
-}(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
+})(jQuery);
