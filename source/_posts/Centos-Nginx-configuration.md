@@ -1,0 +1,147 @@
+---
+title: Centos_Nginx_configuration
+date: 2022-07-31 22:08:20
+tags:
+---
+##Nginx:
+
+nginx 是一个用C语言编写的静态服务器。
+我们可以用它来做反向代理。
+
+案例1：
+
+一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。
+
+例如全球都可以访问（当然天朝大不认还是上不了的..） www.google.com ，那么就可以用nginx做分发。在www.google.com 解析一台主机（例如110.110.100.23）, 当请求发到该主机的时候， 通过nginx分发到不同的其他服务器主机上， 这样就缓解了当前主机的压力。
+
+案例2:
+
+域名解析只能解析到ip， 不能解析到对应到ip主机对应的某一个端口号
+所以你在主机上跑了一个应用是非80端口的，那么你访问你的应用的时候就要域名加上端口才能访问到。
+
+例如:www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。
+
+###安装Nginx
+
+####环境
+操作系统Centos7.2
+
+安装命令:yum install nginx
+
+启动命令:nginx
+
+优雅启动命令:nginx -s reload
+
+测试启动情况：nginx -t
+
+重启nginx：nginx -s reload
+
+针对案例2,需要添加一些配置
+
+在/etc/nginx/nginx.conf 有两个关键的地方:
+
+user nginx; 改为 nginx root;
+若不改动， 会在你启动nginx的时候出现权限不允许的error。
+
+include /etc/nginx/conf.d/*.conf;
+这个inclde的意思就是你在conf.d 文件下的所有的 *.conf 文件， 都会在nginx启动的时候加载进去。
+
+如果在/etc/nginx/下没有conf.d 文件夹，你可以创建conf.d文件夹。
+
+下创建一个自己的.conf配置文件， 或者你可以直接修改/etc/nginx/nginx.conf文件。
+
+我选择直接修改nginx.conf这个文件
+
+修改后的nginx.conf文件（我添加了HTTPS 配置）
+SSL configuration:
+
+user root;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+
+include /usr/share/nginx/modules/*.conf;
+
+events {
+worker_connections 1024;
+}
+
+http {
+log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+  '$status $body_bytes_sent "$http_referer" '
+  '"$http_user_agent" "$http_x_forwarded_for"';
+
+access_log  /var/log/nginx/access.log  main;
+
+sendfileon;
+tcp_nopush  on;
+tcp_nodelay on;
+keepalive_timeout   65;
+types_hash_max_size 2048;
+
+include /etc/nginx/mime.types;
+default_typeapplication/octet-stream;
+
+
+include /etc/nginx/conf.d/*.conf;
+
+server {
+listen   80 default_server;
+listen   [::]:80 default_server;
+server_name  www.daliandaxue.cn;
+root /usr/share/nginx/html;
+
+include /etc/nginx/default.d/*.conf;
+
+location / {
+        rewrite ^(.*) https://$server_name$1 permanent;
+}
+
+error_page 404 /404.html;
+location = /40x.html {
+}
+
+error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+}
+}
+
+
+   server {
+   listen   443 ssl http2 default_server;
+   listen   [::]:443 ssl http2 default_server;
+server_name  www.daliandaxue.cn;
+root /usr/share/nginx/html;
+
+        ssl on;
+        ssl_certificate /etc/nginx/cert/214327484730823.pem;
+        ssl_certificate_key /etc/nginx/cert/214327484730823.key;
+        ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_prefer_server_ciphers on;
+
+
+include /etc/nginx/default.d/*.conf;
+
+location / {
+            proxy_pass  http://localhost:8443;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_redirect off; 
+            `### Most PHP, Python, Rails, Java App can use this header -> https ###`
+            proxy_set_header X-Forwarded-Proto  $scheme;
+}
+
+    error_page 404 /404.html;
+    location = /40x.html {
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+    }
+}
+}
+配置完nginx.conf 文件之后，执行nginx -s reload 就可以通过域名直接访问你的应用了。
+其中的原理就是nginx 监听了服务器主机的80端口。 当有请求通过你设置server_name 访问时，nginx就可以把该请求location 到你的应用上。
