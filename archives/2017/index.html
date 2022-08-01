@@ -1,74 +1,981 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>归档: 2017 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Hexo","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
-          Array
-              .from(document.querySelectorAll('.tab-content'))
-              .forEach($tab => {
-                  $tab.classList.add('is-hidden');
-              });
-          Array
-              .from(document.querySelectorAll('.tabs li'))
-              .forEach($tab => {
-                  $tab.classList.remove('is-active');
-              });
-          const $activeTab = document.querySelector(location.hash);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><h3 class="tag is-primary">2017</h3><div class="timeline"><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-12-06T14:08:30.000Z">2017-12-06</time></p><p class="title"><a href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/">服务器搭建（1）</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-12-05T14:08:20.000Z">2017-12-05</time></p><p class="title"><a href="/2017/12/05/Centos-Nginx-configuration/">Centos_Nginx_configuration</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-08-13T14:08:10.000Z">2017-08-13</time></p><p class="title"><a href="/2017/08/13/2017-renew/">2017-renew</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-08-12T14:07:58.000Z">2017-08-12</time></p><p class="title"><a href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/">JVM学习</a></p></div></article></div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-22T08:22:59.000Z">2022-07-22</time></p><p class="title"><a href="/2022/07/22/take-by-control/">take by control</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-21T07:05:40.450Z">2022-07-21</time></p><p class="title"><a href="/2022/07/21/hello-world/">Hello World</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-12-06T14:08:30.000Z">2017-12-06</time></p><p class="title"><a href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/">服务器搭建（1）</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-12-05T14:08:20.000Z">2017-12-05</time></p><p class="title"><a href="/2017/12/05/Centos-Nginx-configuration/">Centos_Nginx_configuration</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-08-13T14:08:10.000Z">2017-08-13</time></p><p class="title"><a href="/2017/08/13/2017-renew/">2017-renew</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/12/"><span class="level-start"><span class="level-item">十二月 2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/08/"><span class="level-start"><span class="level-item">八月 2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/09/"><span class="level-start"><span class="level-item">九月 2016</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="归档: 2017, Hexo">
+    <meta name="description" content="Hexo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>归档: 2017 | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+    <div class="container archive-calendar">
+    <div class="card">
+        <div id="post-calendar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
+
+    
+
+    let option = {
+        title: {
+            top: 0,
+            text: '文章日历',
+            left: 'center',
+            textStyle: {
+                color: '#3C4858'
             }
-        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
         },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
         },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
+        visualMap: {
+            show: true,
+            showLabel: true,
+            categories: [0, 1, 2, 3, 4],
+            calculable: true,
+            inRange: {
+                symbol: 'rect',
+                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: 0
+        },
+        calendar: [{
+            left: 'center',
+            range: ["2021-08-01", "2022-08-01"],
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                color: '#196127',
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                nameMap: 'cn',
+                fontSize: 11
+            },
+            dayLabel: {
+                formatter: '{start}  1st',
+                nameMap: 'cn',
+                fontSize: 11
             }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: [["2021-08-01", 0], ["2021-08-02", 0], ["2021-08-03", 0], ["2021-08-04", 0], ["2021-08-05", 0], ["2021-08-06", 0], ["2021-08-07", 0], ["2021-08-08", 0], ["2021-08-09", 0], ["2021-08-10", 0], ["2021-08-11", 0], ["2021-08-12", 0], ["2021-08-13", 0], ["2021-08-14", 0], ["2021-08-15", 0], ["2021-08-16", 0], ["2021-08-17", 0], ["2021-08-18", 0], ["2021-08-19", 0], ["2021-08-20", 0], ["2021-08-21", 0], ["2021-08-22", 0], ["2021-08-23", 0], ["2021-08-24", 0], ["2021-08-25", 0], ["2021-08-26", 0], ["2021-08-27", 0], ["2021-08-28", 0], ["2021-08-29", 0], ["2021-08-30", 0], ["2021-08-31", 0], ["2021-09-01", 0], ["2021-09-02", 0], ["2021-09-03", 0], ["2021-09-04", 0], ["2021-09-05", 0], ["2021-09-06", 0], ["2021-09-07", 0], ["2021-09-08", 0], ["2021-09-09", 0], ["2021-09-10", 0], ["2021-09-11", 0], ["2021-09-12", 0], ["2021-09-13", 0], ["2021-09-14", 0], ["2021-09-15", 0], ["2021-09-16", 0], ["2021-09-17", 0], ["2021-09-18", 0], ["2021-09-19", 0], ["2021-09-20", 0], ["2021-09-21", 0], ["2021-09-22", 0], ["2021-09-23", 0], ["2021-09-24", 0], ["2021-09-25", 0], ["2021-09-26", 0], ["2021-09-27", 0], ["2021-09-28", 0], ["2021-09-29", 0], ["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 0], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 0], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 0], ["2021-12-10", 0], ["2021-12-11", 0], ["2021-12-12", 0], ["2021-12-13", 0], ["2021-12-14", 0], ["2021-12-15", 0], ["2021-12-16", 0], ["2021-12-17", 0], ["2021-12-18", 0], ["2021-12-19", 0], ["2021-12-20", 0], ["2021-12-21", 0], ["2021-12-22", 0], ["2021-12-23", 0], ["2021-12-24", 0], ["2021-12-25", 0], ["2021-12-26", 0], ["2021-12-27", 0], ["2021-12-28", 0], ["2021-12-29", 0], ["2021-12-30", 0], ["2021-12-31", 0], ["2022-01-01", 0], ["2022-01-02", 0], ["2022-01-03", 0], ["2022-01-04", 0], ["2022-01-05", 0], ["2022-01-06", 0], ["2022-01-07", 0], ["2022-01-08", 0], ["2022-01-09", 0], ["2022-01-10", 0], ["2022-01-11", 0], ["2022-01-12", 0], ["2022-01-13", 0], ["2022-01-14", 0], ["2022-01-15", 0], ["2022-01-16", 0], ["2022-01-17", 0], ["2022-01-18", 0], ["2022-01-19", 0], ["2022-01-20", 0], ["2022-01-21", 0], ["2022-01-22", 0], ["2022-01-23", 0], ["2022-01-24", 0], ["2022-01-25", 0], ["2022-01-26", 0], ["2022-01-27", 0], ["2022-01-28", 0], ["2022-01-29", 0], ["2022-01-30", 0], ["2022-01-31", 0], ["2022-02-01", 0], ["2022-02-02", 0], ["2022-02-03", 0], ["2022-02-04", 0], ["2022-02-05", 0], ["2022-02-06", 0], ["2022-02-07", 0], ["2022-02-08", 0], ["2022-02-09", 0], ["2022-02-10", 0], ["2022-02-11", 0], ["2022-02-12", 0], ["2022-02-13", 0], ["2022-02-14", 0], ["2022-02-15", 0], ["2022-02-16", 0], ["2022-02-17", 0], ["2022-02-18", 0], ["2022-02-19", 0], ["2022-02-20", 0], ["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 0], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 0], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 0], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 0], ["2022-05-30", 0], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 1], ["2022-07-22", 1], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0]]
+        }]
+
+    };
+
+    myChart.setOption(option);
+</script>
+
+    
+
+    
+
+    <div id="cd-timeline" class="container">
+        
+        <div class="cd-timeline-block">
+
+            
+            
+            
+            <div class="cd-timeline-img year" data-aos="zoom-in-up">
+                <a href="/archives/2017">2017</a>
+            </div>
+            
+
+            
+            
+            
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                <a href="/archives/2017/12">12</a>
+            </div>
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>06</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="服务器搭建（1）">
+                                
+                                <span class="card-title">服务器搭建（1）</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2017-12-06
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-user fa-fw"></i>
+                                    John Doe
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>05</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2017/12/05/Centos-Nginx-configuration/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Centos_Nginx_configuration">
+                                
+                                <span class="card-title">Centos_Nginx_configuration</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    ##Nginx:
+nginx 是一个用C语言编写的静态服务器。我们可以用它来做反向代理。
+案例1：
+一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。
+例如全球都可以访问（当然天朝大不
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2017-12-05
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-user fa-fw"></i>
+                                    John Doe
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+            
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                <a href="/archives/2017/08">08</a>
+            </div>
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>13</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2017/08/13/2017-renew/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2017-renew">
+                                
+                                <span class="card-title">2017-renew</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    #2017,下半年小目标
+
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2017-08-13
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-user fa-fw"></i>
+                                    John Doe
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>12</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JVM学习">
+                                
+                                <span class="card-title">JVM学习</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    #一、运行时数据区域
+##程序计数器(Program Counter Register)1、线程私有 2、JAVA虚拟机规范中没有规定任何OutOfMemoryError
+##JAVA虚拟机栈（Java Virtual Machine St
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2017-08-12
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-user fa-fw"></i>
+                                    John Doe
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+    </div>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
             }
-        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
