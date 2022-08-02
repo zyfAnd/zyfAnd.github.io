@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>take by control</title>
+      <link href="/2022/07/22/take-by-control/"/>
+      <url>/2022/07/22/take-by-control/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Hi-I-am-Yanfu"><a href="#Hi-I-am-Yanfu" class="headerlink" title="Hi I am Yanfu"></a>Hi I am Yanfu</h3><p>I am taking back control for the blog…</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/07/21/hello-world/"/>
+      <url>/2022/07/21/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>服务器搭建（1）</title>
+      <link href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/"/>
+      <url>/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Centos_Nginx_configuration</title>
+      <link href="/2017/12/05/Centos-Nginx-configuration/"/>
+      <url>/2017/12/05/Centos-Nginx-configuration/</url>
+      
+        <content type="html"><![CDATA[<p>##Nginx:</p><p>nginx 是一个用C语言编写的静态服务器。<br>我们可以用它来做反向代理。</p><p>案例1：</p><p>一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。</p><p>例如全球都可以访问（当然天朝大不认还是上不了的..） <a href="http://www.google.com/">www.google.com</a> ，那么就可以用nginx做分发。在<a href="http://www.google.com/">www.google.com</a> 解析一台主机（例如110.110.100.23）, 当请求发到该主机的时候， 通过nginx分发到不同的其他服务器主机上， 这样就缓解了当前主机的压力。</p><p>案例2:</p><p>域名解析只能解析到ip， 不能解析到对应到ip主机对应的某一个端口号<br>所以你在主机上跑了一个应用是非80端口的，那么你访问你的应用的时候就要域名加上端口才能访问到。</p><p>例如:<a href="http://www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。">www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。</a></p><p>###安装Nginx</p><p>####环境<br>操作系统Centos7.2</p><p>安装命令:yum install nginx</p><p>启动命令:nginx</p><p>优雅启动命令:nginx -s reload</p><p>测试启动情况：nginx -t</p><p>重启nginx：nginx -s reload</p><p>针对案例2,需要添加一些配置</p><p>在/etc/nginx/nginx.conf 有两个关键的地方:</p><p>user nginx; 改为 nginx root;<br>若不改动， 会在你启动nginx的时候出现权限不允许的error。</p><p>include /etc/nginx/conf.d/*.conf;<br>这个inclde的意思就是你在conf.d 文件下的所有的 *.conf 文件， 都会在nginx启动的时候加载进去。</p><p>如果在/etc/nginx/下没有conf.d 文件夹，你可以创建conf.d文件夹。</p><p>下创建一个自己的.conf配置文件， 或者你可以直接修改/etc/nginx/nginx.conf文件。</p><p>我选择直接修改nginx.conf这个文件</p><p>修改后的nginx.conf文件（我添加了HTTPS 配置）<br>SSL configuration:</p><p>user root;<br>worker_processes auto;<br>error_log /var/log/nginx/error.log;<br>pid /run/nginx.pid;</p><p>include /usr/share/nginx/modules/*.conf;</p><p>events {<br>worker_connections 1024;<br>}</p><p>http {<br>log_format  main  ‘$remote_addr - $remote_user [$time_local] “$request” ‘<br>  ‘$status $body_bytes_sent “$http_referer” ‘<br>  ‘“$http_user_agent” “$http_x_forwarded_for”‘;</p><p>access_log  /var/log/nginx/access.log  main;</p><p>sendfileon;<br>tcp_nopush  on;<br>tcp_nodelay on;<br>keepalive_timeout   65;<br>types_hash_max_size 2048;</p><p>include /etc/nginx/mime.types;<br>default_typeapplication/octet-stream;</p><p>include /etc/nginx/conf.d/*.conf;</p><p>server {<br>listen   80 default_server;<br>listen   [::]:80 default_server;<br>server_name  <a href="http://www.daliandaxue.cn/">www.daliandaxue.cn</a>;<br>root /usr/share/nginx/html;</p><p>include /etc/nginx/default.d/*.conf;</p><p>location / {<br>        rewrite ^(.*) https://$server_name$1 permanent;<br>}</p><p>error_page 404 /404.html;<br>location = /40x.html {<br>}</p><p>error_page 500 502 503 504 /50x.html;<br>location = /50x.html {<br>}<br>}</p><p>   server {<br>   listen   443 ssl http2 default_server;<br>   listen   [::]:443 ssl http2 default_server;<br>server_name  <a href="http://www.daliandaxue.cn/">www.daliandaxue.cn</a>;<br>root /usr/share/nginx/html;</p><pre><code>    ssl on;    ssl_certificate /etc/nginx/cert/214327484730823.pem;    ssl_certificate_key /etc/nginx/cert/214327484730823.key;    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;    ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;    ssl_prefer_server_ciphers on;</code></pre><p>include /etc/nginx/default.d/*.conf;</p><p>location / {<br>            proxy_pass  <a href="http://localhost:8443/">http://localhost:8443</a>;<br>            proxy_set_header Host $host;<br>            proxy_set_header X-Real-IP $remote_addr;<br>            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br>            proxy_redirect off;<br>            <code>### Most PHP, Python, Rails, Java App can use this header -&gt; https ###</code><br>            proxy_set_header X-Forwarded-Proto  $scheme;<br>}</p><pre><code>error_page 404 /404.html;location = /40x.html &#123;&#125;error_page 500 502 503 504 /50x.html;location = /50x.html &#123;&#125;</code></pre><p>}<br>}<br>配置完nginx.conf 文件之后，执行nginx -s reload 就可以通过域名直接访问你的应用了。<br>其中的原理就是nginx 监听了服务器主机的80端口。 当有请求通过你设置server_name 访问时，nginx就可以把该请求location 到你的应用上。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2017-renew</title>
+      <link href="/2017/08/13/2017-renew/"/>
+      <url>/2017/08/13/2017-renew/</url>
+      
+        <content type="html"><![CDATA[<p>#2017,下半年小目标</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JVM学习</title>
+      <link href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p>#一、运行时数据区域</p><p>##程序计数器(Program Counter Register)<br>1、线程私有 2、JAVA虚拟机规范中没有规定任何OutOfMemoryError</p><p>##JAVA虚拟机栈（Java Virtual Machine Stacks）<br>1、线程私有<br>2、存储局部变量表<br>3、操作数栈<br>4、动态链接<br>5、方法出口</p><p>##本地方法栈</p><p>##JAVA 堆</p><p>##方法去</p><p>##运行时常量池</p><p>##直接内存</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决win7电脑网络连接异常的问题</title>
+      <link href="/2016/09/13/%E8%A7%A3%E5%86%B3win7%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2016/09/13/%E8%A7%A3%E5%86%B3win7%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>1.首先，打开电脑,网络连接图标出现红色的叉子,说明网络适配器有问题<br>2.打开网络共享中心-&gt;更改是配置设置-&gt;看到WLAN(或者叫无线连接)和本地连接。<br>使用本地图片<br>使用本地图片</p><p>3.先右键选择其中一个本地连接或者无线连接禁用它在启用<br>4.如果还是不好使的话,就打开设备管理器,查看一下网络设配器选项,下面的驱动是不是有成黄色感叹号的，有的话右键选中它禁用然后在启用。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
