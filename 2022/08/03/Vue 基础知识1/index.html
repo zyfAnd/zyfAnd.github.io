@@ -4,9 +4,21 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="take by control, 扯犊子">
-    <meta name="description" content="Hi I am YanfuI am taking back control for the blog…
-">
+    <meta name="keywords" content="Vue 基本知识1, 扯犊子">
+    <meta name="description" content="Vue学习网站
+
+
+Vue官网
+https://cn.vuejs.org/v2/guide/
+
+
+
+表严肃
+https://biaoyansu.com/22.9
+
+
+B站kuangshen
+https://www.bilibili.com/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +32,7 @@
 
     
 
-    <title>take by control | 扯犊子</title>
+    <title>Vue 基本知识1 | 扯犊子</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -310,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">take by control</h1>
+                    <h1 class="description center-align post-title">Vue 基本知识1</h1>
                 </div>
             </div>
         </div>
@@ -436,6 +448,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Vue/" class="post-category">
+                                Vue
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -443,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-22
+                    2022-08-03
                 </div>
                 
 
@@ -464,7 +485,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Hi-I-am-Yanfu"><a href="#Hi-I-am-Yanfu" class="headerlink" title="Hi I am Yanfu"></a>Hi I am Yanfu</h3><p>I am taking back control for the blog…</p>
+                <h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><h5 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h5><table>
+<thead>
+<tr>
+<th>Vue官网</th>
+<th><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/">https://cn.vuejs.org/v2/guide/</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表严肃</td>
+<td><a target="_blank" rel="noopener" href="https://biaoyansu.com/22.9">https://biaoyansu.com/22.9</a></td>
+</tr>
+<tr>
+<td>B站kuangshen</td>
+<td><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18E411a7mC?p=13">https://www.bilibili.com/video/BV18E411a7mC?p=13</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="安装Webpack"><a href="#安装Webpack" class="headerlink" title="安装Webpack"></a>安装Webpack</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br><span class="line">npm install webpack-cli </span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="脚手架创建项目"><a href="#脚手架创建项目" class="headerlink" title="脚手架创建项目"></a>脚手架创建项目</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create myproject</span><br></pre></td></tr></table></figure>
+
+<p>项目的结构分析</p>
+<ul>
+<li>src</li>
+<li></li>
+</ul>
+<h5 id="Vue基础"><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h5><h6 id="props"><a href="#props" class="headerlink" title="props"></a>props</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">## 配置 props </span><br><span class="line">   功能：接收外部传入的数据</span><br><span class="line">     <span class="number">1.</span> 传递数据</span><br><span class="line">       &lt;<span class="title class_">Student</span> name=<span class="string">&quot;Zhang San&quot;</span>/&gt;</span><br><span class="line">     <span class="number">2.</span> 接收数据</span><br><span class="line">        <span class="number">2.1</span> 第一种方式</span><br><span class="line">             <span class="attr">props</span>:[<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;gae&#x27;</span>]</span><br><span class="line">        <span class="number">2.3</span> 第二种方式</span><br><span class="line">             <span class="attr">props</span>:&#123;</span><br><span class="line">               <span class="attr">name</span>: <span class="title class_">String</span>,</span><br><span class="line">               <span class="attr">age</span>: <span class="title class_">Number</span></span><br><span class="line">               <span class="attr">gender</span>: <span class="title class_">String</span></span><br><span class="line">             &#125;</span><br><span class="line">        <span class="number">2.4</span> 第三种方式</span><br><span class="line">            <span class="attr">props</span>:&#123;</span><br><span class="line">              <span class="attr">name</span>: &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="title class_">String</span>, <span class="comment">//限制数据类型</span></span><br><span class="line">                <span class="attr">required</span>: <span class="literal">true</span> <span class="comment">//这个字段必传</span></span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">age</span>:&#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="title class_">Number</span>,</span><br><span class="line">                <span class="attr">required</span>: <span class="literal">false</span></span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">gender</span>: &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">                <span class="attr">default</span>:<span class="string">&#x27;男&#x27;</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="Vue的件事处理"><a href="#Vue的件事处理" class="headerlink" title="Vue的件事处理"></a>Vue的件事处理</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">&quot;showInfo&quot;</span>&gt;点我&lt;/button&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;showInfo2&quot;</span> &gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>、</span><br></pre></td></tr></table></figure>
+
+
+
+<p>MyAction Vue component </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;showInfo&quot;</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">name</span>: <span class="string">&quot;MyAction&quot;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">methods</span>:&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">showInfo</span>(<span class="params"></span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="title function_">alert</span>(<span class="string">&quot;点我 点我！&quot;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;click....&quot;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h6 id="Vue-的组件"><a href="#Vue-的组件" class="headerlink" title="Vue 的组件"></a>Vue 的组件</h6><p>new VueComponent(options)</p>
+<h6 id="Vue-ElementUI"><a href="#Vue-ElementUI" class="headerlink" title="Vue- ElementUI"></a>Vue- ElementUI</h6><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i element-ui </span><br></pre></td></tr></table></figure>
+
+<p>安装指定版本的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i element-ui@2.11.0</span><br></pre></td></tr></table></figure>
+
+<p>使用</p>
+<p>在main js 里引入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import ElementUI from &#x27;element-ui&#x27;;</span><br><span class="line">import &#x27;element-ui/lib/theme-chalk/index.css&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>注册</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
+
+<p>Element UI 最新版本的依赖 table不显示（显示空白)</p>
+<p>降低版本到  “element-ui”: “^2.11.0”,</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;axios&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.24.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;core-js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.6.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;element-ui&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.11.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;vue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.6.11&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;vue-axios&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.4.0&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="Vue-Axios-网络请求"><a href="#Vue-Axios-网络请求" class="headerlink" title="Vue-Axios 网络请求"></a>Vue-Axios 网络请求</h6><p>how to install</p>
+<p>ECS 6 Module</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save axios vue-axios</span><br></pre></td></tr></table></figure>
+
+<p>Import libraries in entry file:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// import Vue from &#x27;vue&#x27;   // in Vue 2</span><br><span class="line">import * as Vue from &#x27;vue&#x27; // in Vue 3</span><br><span class="line">import axios from &#x27;axios&#x27;</span><br><span class="line">import VueAxios from &#x27;vue-axios&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>Usage in Vue 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(VueAxios, axios)</span><br></pre></td></tr></table></figure>
+
+<p>Usage in Vue 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const app = Vue.createApp(...)</span><br><span class="line">app.use(VueAxios, axios)</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -491,7 +586,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zyfand.github.io/2022/07/22/take-by-control/">https://zyfand.github.io/2022/07/22/take-by-control/</a>
+                    <a href="https://zyfand.github.io/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">https://zyfand.github.io/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,13 +799,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">
+                <a href="/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue 基本知识1">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Docker的基本命令">
                         
-                        <span class="card-title">Vue 基本知识1</span>
+                        <span class="card-title">Docker的基本命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -727,8 +822,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category">
-                                    Vue
+                            <a href="/categories/Docker/" class="post-category">
+                                    Docker
                                 </a>
                             
                             
@@ -745,13 +840,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/21/hello-world/">
+                <a href="/2022/07/22/take-by-control/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="take by control">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">take by control</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -762,7 +857,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-22
                             </span>
                         <span class="publish-author">
                             
