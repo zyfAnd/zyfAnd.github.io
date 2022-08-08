@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>代码高亮测试</title>
+      <link href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/"/>
+      <url>/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  name<span class="token punctuation">:</span> <span class="token string">"MyAction"</span><span class="token punctuation">,</span>  methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"点我 点我！"</span><span class="token punctuation">)</span>      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"click...."</span><span class="token punctuation">)</span>    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Angular基础知识</title>
       <link href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
       <url>/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
