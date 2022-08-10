@@ -7,15 +7,15 @@
     <meta name="keywords" content="Angular基础知识, 扯犊子">
     <meta name="description" content="angular
 angular cli安装 angular cli
-1npm install -g @angular/cli
+npm install -g @angular/cli
 
 卸载
-1npm uninstall -g @angular/cli
+npm uninstall -g @angular/cli
 
 node 升级
 清除npm缓存
 
-1npm">
+npm ca">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -484,43 +484,69 @@ node 升级
             <div id="articleContent">
                 <p>angular</p>
 <h4 id="angular-cli"><a href="#angular-cli" class="headerlink" title="angular cli"></a>angular cli</h4><p>安装 angular cli</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @angular/cli</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-shell"><code class="language-shell">npm install -g @angular/cli
+</code></pre>
 <p>卸载</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g @angular/cli</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-shell"><code class="language-shell">npm uninstall -g @angular/cli
+</code></pre>
 <h4 id="node-升级"><a href="#node-升级" class="headerlink" title="node 升级"></a>node 升级</h4><ol>
 <li>清除npm缓存</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean -f </span><br></pre></td></tr></table></figure>
-
+<pre><code>npm cache clean -f 
+</code></pre>
 <ol start="2">
 <li><p>安装n 模块</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br></pre></td></tr></table></figure></li>
+<pre class=" language-shell"><code class="language-shell">npm install -g n
+</code></pre>
+</li>
 <li><p>升级node到稳定版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n stable </span><br></pre></td></tr></table></figure></li>
+<pre class=" language-shell"><code class="language-shell">n stable 
+</code></pre>
+</li>
 <li><p>查看 node的版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure></li>
+<pre class=" language-shell"><code class="language-shell">node -v
+</code></pre>
+</li>
 </ol>
 <h4 id="Ng-ant-design"><a href="#Ng-ant-design" class="headerlink" title="Ng ant-design"></a>Ng ant-design</h4><p>引入 ant design</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ng new PROJECT_NAME</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> PROJECT_NAME</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install ng-zorro-antd --save</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-shell"><code class="language-shell">$ ng new PROJECT_NAME
+$ cd PROJECT_NAME
+$ npm install ng-zorro-antd --save
+</code></pre>
 <h5 id="使用全部组件样式"><a href="#使用全部组件样式" class="headerlink" title="使用全部组件样式"></a>使用全部组件样式</h5><p>该配置将包含组件库的全部样式，如果只想使用某些组件请查看 <a target="_blank" rel="noopener" href="https://ng.ant.design/docs/getting-started/zh#%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F">使用特定组件样式</a> 配置。</p>
 <p>在 <code>angular.json</code> 中引入了</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;styles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;node_modules/ng-zorro-antd/ng-zorro-antd.min.css&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"node_modules/ng-zorro-antd/ng-zorro-antd.min.css"</span>
+  <span class="token punctuation">]</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 <p>在 <code>style.css</code> 中引入预构建样式文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~ng-zorro-antd/ng-zorro-antd.min.css&quot;</span>;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~ng-zorro-antd/style/index.min.css&quot;</span>; <span class="comment">/* 引入基本样式 */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;~ng-zorro-antd/button/style/index.min.css&quot;</span>; <span class="comment">/* 引入组件样式 */</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/ng-zorro-antd.min.css"</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/style/index.min.css"</span><span class="token punctuation">;</span></span> <span class="token comment" spellcheck="true">/* 引入基本样式 */</span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/button/style/index.min.css"</span><span class="token punctuation">;</span></span> <span class="token comment" spellcheck="true">/* 引入组件样式 */</span>
+</code></pre>
 <h5 id="引入模块组件"><a href="#引入模块组件" class="headerlink" title="引入模块组件"></a>引入模块组件</h5><p>以下面的 <code>NzButtonModule</code> 模块为例，先引入组件模块：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NgModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NzButtonModule</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;ng-zorro-antd/button&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">AppComponent</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.component&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@NgModule</span>(&#123;</span><br><span class="line">  <span class="attr">declarations</span>: [</span><br><span class="line">    <span class="title class_">AppComponent</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    <span class="title class_">NzButtonModule</span></span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">AppModule</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NzButtonModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> AppComponent <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
 
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    AppComponent
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    NzButtonModule
+  <span class="token punctuation">]</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 <p>然后在模板中使用：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">nz-button</span> <span class="attr">nzType</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>Primary<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">nz-button</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
 <p>清除缓存</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean -f</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-shell"><code class="language-shell"> npm cache clean -f
+</code></pre>
 
                 
             </div>
