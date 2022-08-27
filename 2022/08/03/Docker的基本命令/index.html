@@ -6,14 +6,15 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Docker的基本命令, 扯犊子">
     <meta name="description" content="Docker的基本命令启动docker
- $sudo systemctl start docker
+1$sudo systemctl start docker
 
-获取镜像$docker pull [image]
-$docker pull ubuntu
 
-启动容器docker run 
 
-查看所有的容">
+获取镜像12$docker pull [image]$docker pull ubuntu
+
+启动容器1docker run 
+
+查看">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -40,7 +41,7 @@ $docker pull ubuntu
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <body>
@@ -481,81 +482,54 @@ $docker pull ubuntu
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h5 id="Docker的基本命令"><a href="#Docker的基本命令" class="headerlink" title="Docker的基本命令"></a>Docker的基本命令</h5><p>启动docker</p>
-<pre class=" language-shell"><code class="language-shell"> $sudo systemctl start docker
-</code></pre>
-<h6 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h6><pre class=" language-shell"><code class="language-shell">$docker pull [image]
-$docker pull ubuntu
-</code></pre>
-<h6 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h6><pre><code>docker run 
-</code></pre>
-<h6 id="查看所有的容器"><a href="#查看所有的容器" class="headerlink" title="查看所有的容器"></a>查看所有的容器</h6><pre class=" language-shell"><code class="language-shell">$ docker ps
-</code></pre>
-<h6 id="查看所有的镜像"><a href="#查看所有的镜像" class="headerlink" title="查看所有的镜像"></a>查看所有的镜像</h6><pre class=" language-shell"><code class="language-shell">$ docker images
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">sudo systemctl start docker</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">docker pull [image]</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">docker pull ubuntu</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run </span><br></pre></td></tr></table></figure>
+
+<h6 id="查看所有的容器"><a href="#查看所有的容器" class="headerlink" title="查看所有的容器"></a>查看所有的容器</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker ps</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="查看所有的镜像"><a href="#查看所有的镜像" class="headerlink" title="查看所有的镜像"></a>查看所有的镜像</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker images</span></span><br></pre></td></tr></table></figure>
+
+
+
 <p>删除所有的镜像</p>
-<pre class=" language-shell"><code class="language-shell">docker rmi $(docker images -q)
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+
 <p>删除所有的容器</p>
-<pre class=" language-shell"><code class="language-shell">docker rm $(docker ps -aq)
-</code></pre>
-<h5 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h5><h6 id="查看容器运行状态"><a href="#查看容器运行状态" class="headerlink" title="查看容器运行状态"></a>查看容器运行状态</h6><pre class=" language-shell"><code class="language-shell">列出所有的容器及其运行状态
-$ docker-compose ps   
-[root@happy test]# docker-compose ps
-     Name                    Command               State                          Ports                       
---------------------------------------------------------------------------------------------------------------
-container_mysql   docker-entrypoint.sh --cha ...   Up      0.0.0.0:3306->3306/tcp,:::3306->3306/tcp, 33060/tcp
-container_redis   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp,:::6379->6379/tcp           
-nginx             /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80->80/tcp,:::80->80/tcp                   
-web               java -jar /app.jar --serve ...   Up      0.0.0.0:8080->8080/tcp,:::8080->8080/tcp           
-[root@happy test]# 
-</code></pre>
-<h6 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h6><pre class=" language-shell"><code class="language-shell">$ docker-compose up -d 后台启动
-$ docker-compose up --build   build 并启动
-</code></pre>
-<h6 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h6><pre class=" language-shell"><code class="language-shell">$ docker-compose down
-</code></pre>
-<h6 id="查看容器的信息"><a href="#查看容器的信息" class="headerlink" title="查看容器的信息"></a>查看容器的信息</h6><pre class=" language-shell"><code class="language-shell">[root@happy test]# docker inspect nginx
-  "IPAddress": "172.26.0.4",
-</code></pre>
-<h6 id="查看liunx-本机IP"><a href="#查看liunx-本机IP" class="headerlink" title="查看liunx 本机IP"></a>查看liunx 本机IP</h6><pre class=" language-shell"><code class="language-shell">$ ifconfig
-</code></pre>
-<h6 id="删除所有容器"><a href="#删除所有容器" class="headerlink" title="删除所有容器"></a>删除所有容器</h6><pre class=" language-shell"><code class="language-shell">docker rm $(docker ps -aq)
-</code></pre>
-<h6 id="删除所有的镜像"><a href="#删除所有的镜像" class="headerlink" title="删除所有的镜像"></a>删除所有的镜像</h6><pre class=" language-shell"><code class="language-shell">docker rmi $(docker images -q)
-</code></pre>
-<h5 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h5><h6 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h6><pre class=" language-nginx"><code class="language-nginx"><span class="token keyword">user</span> nginx<span class="token punctuation">;</span>
-<span class="token keyword">worker_processes</span>  <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">events</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">worker_connections</span>  <span class="token number">1024</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-<span class="token keyword">http</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">include</span>       <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>mime<span class="token punctuation">.</span><span class="token keyword">types</span><span class="token punctuation">;</span>
-    <span class="token keyword">default_type</span>  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
-    <span class="token keyword">sendfile</span>        on<span class="token punctuation">;</span>
-    <span class="token keyword">keepalive_timeout</span>  <span class="token number">65</span><span class="token punctuation">;</span>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
 
 
-    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
-        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-         <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>balance<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 
-    <span class="token keyword">upstream</span> balance<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-       <span class="token keyword">server</span> <span class="token number">172.17</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token punctuation">:</span><span class="token number">8080</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#docker的IP地址</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token keyword">include</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-</code></pre>
-<h6 id="查看docker的IP"><a href="#查看docker的IP" class="headerlink" title="查看docker的IP"></a>查看docker的IP</h6><pre class=" language-shell"><code class="language-shell">[root@happy test]# ip addr show docker0
-3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
-    link/ether 02:42:7c:ab:6d:00 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:7cff:feab:6d00/64 scope link 
-       valid_lft forever preferred_lft forever
-</code></pre>
+<h5 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h5><h6 id="查看容器运行状态"><a href="#查看容器运行状态" class="headerlink" title="查看容器运行状态"></a>查看容器运行状态</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">列出所有的容器及其运行状态</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker-compose ps</span>   </span><br><span class="line">[root@happy test]# docker-compose ps</span><br><span class="line">     Name                    Command               State                          Ports                       </span><br><span class="line">--------------------------------------------------------------------------------------------------------------</span><br><span class="line">container_mysql   docker-entrypoint.sh --cha ...   Up      0.0.0.0:3306-&gt;3306/tcp,:::3306-&gt;3306/tcp, 33060/tcp</span><br><span class="line">container_redis   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379-&gt;6379/tcp,:::6379-&gt;6379/tcp           </span><br><span class="line">nginx             /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80-&gt;80/tcp,:::80-&gt;80/tcp                   </span><br><span class="line">web               java -jar /app.jar --serve ...   Up      0.0.0.0:8080-&gt;8080/tcp,:::8080-&gt;8080/tcp           </span><br><span class="line">[root@happy test]# </span><br></pre></td></tr></table></figure>
+
+<h6 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker-compose up -d 后台启动</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker-compose up --build   build 并启动</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker-compose down</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="查看容器的信息"><a href="#查看容器的信息" class="headerlink" title="查看容器的信息"></a>查看容器的信息</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@happy test]# docker inspect nginx</span><br><span class="line">  &quot;IPAddress&quot;: &quot;172.26.0.4&quot;,</span><br></pre></td></tr></table></figure>
+
+<h6 id="查看liunx-本机IP"><a href="#查看liunx-本机IP" class="headerlink" title="查看liunx 本机IP"></a>查看liunx 本机IP</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ifconfig</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="删除所有容器"><a href="#删除所有容器" class="headerlink" title="删除所有容器"></a>删除所有容器</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="删除所有的镜像"><a href="#删除所有的镜像" class="headerlink" title="删除所有的镜像"></a>删除所有的镜像</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h5><h6 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h6><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">user</span> nginx;</span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       /etc/nginx/mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">         <span class="attribute">proxy_pass</span> http://balance;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="section">upstream</span> balance&#123;</span><br><span class="line">       <span class="attribute">server</span> <span class="number">172.17.0.1:8080</span>; <span class="comment">#docker的IP地址</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="attribute">include</span> /etc/nginx/conf.d/<span class="regexp">*.conf</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="查看docker的IP"><a href="#查看docker的IP" class="headerlink" title="查看docker的IP"></a>查看docker的IP</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@happy test]# ip addr show docker0</span><br><span class="line">3: docker0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default </span><br><span class="line">    link/ether 02:42:7c:ab:6d:00 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 fe80::42:7cff:feab:6d00/64 scope link </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br></pre></td></tr></table></figure>
+
+
+
 <h4 id="Docker-教程"><a href="#Docker-教程" class="headerlink" title="Docker 教程"></a>Docker 教程</h4><p><a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP">https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP</a></p>
 <p>k8s -<a target="_blank" rel="noopener" href="https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45">https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45</a></p>
 
