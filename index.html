@@ -1,1325 +1,940 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="扯犊子">
-    <meta name="description" content="扯犊子">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta charset="utf-8">
+  
 
+  
+  <title>韦阳的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="华东师范大学 | 计算机科学与技术 | 自然语言处理">
+<meta property="og:type" content="website">
+<meta property="og:title" content="韦阳的博客">
+<meta property="og:url" content="https://godweiyang.com/index.html">
+<meta property="og:site_name" content="韦阳的博客">
+<meta property="og:description" content="华东师范大学 | 计算机科学与技术 | 自然语言处理">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="韦阳">
+<meta property="article:tag" content="ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习 算法码上来">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="韦阳的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-    
-
-    <title>扯犊子</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-
-    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-
-<meta name="generator" content="Hexo 6.2.0"></head>
-
+<meta name="generator" content="Hexo 6.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">扯犊子</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">韦阳的博客</a>
+      </h1>
       
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">扯犊子</div>
-        <div class="logo-desc">
-            
-            Never really desperate, only the lost of the soul.
-            
-        </div>
     </div>
-
-    <ul class="menu-list mobile-menu-list">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
+          <a class="main-nav-link" href="/">Home</a>
         
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
+      </nav>
+      <nav id="sub-nav">
         
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
-    </nav>
-
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://godweiyang.com"></form>
+      </div>
+    </div>
+  </div>
 </header>
-
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-代码高亮测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time datetime="2022-08-08T13:58:43.000Z" itemprop="datePublished">2022-08-08</time>
+</a>
     
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/test/">test</a>
+  </div>
 
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+  </div>
+  <div class="article-inner">
     
-
-    <div class="carousel-item  white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                追求自由
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
-    </div>
-
     
-</div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
+      <header class="article-header">
         
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/">代码高亮测试</a>
+    </h1>
+  
 
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
-
-<main class="content">
-
+      </header>
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h4><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  name<span class="token punctuation">:</span> <span class="token string">"MyAction"</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"点我 点我！"</span><span class="token punctuation">)</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"click...."</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/" data-id="cl7cqfnce000dtlujg4dshokr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Angular基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time datetime="2022-08-03T14:08:45.000Z" itemprop="datePublished">2022-08-03</time>
+</a>
     
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            让自己的时间支配权越来越来大
-        </div>
-    </div>
-</div>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Angular/">Angular</a>
+  </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+  <div class="article-inner">
     
-
     
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="代码高亮测试">
-                            
-                            <span class="card-title">代码高亮测试</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Test1234567891011&lt;script&gt;export default &#123;  name: &quot;MyAction&quot;,  methods:&#123;    showInfo()&#123;   
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/test/" class="post-category">
-                                    test
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Angular基础知识">
-                            
-                            <span class="card-title">Angular基础知识</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                angular
-angular cli安装 angular cli
-1npm install -g @angular/cli
-
-卸载
-1npm uninstall -g @angular/cli
-
-node 升级
-清除npm缓存
-
-1npm
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Angular/" class="post-category">
-                                    Angular
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Docker的基本命令">
-                            
-                            <span class="card-title">Docker的基本命令</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Docker的基本命令启动docker
-1$sudo systemctl start docker
-
-
-
-获取镜像12$docker pull [image]$docker pull ubuntu
-
-启动容器1docker run 
-
-查看
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Docker/" class="post-category">
-                                    Docker
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue 基本知识1">
-                            
-                            <span class="card-title">Vue 基本知识1</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Vue学习网站
-
-
-Vue官网
-https://cn.vuejs.org/v2/guide/
-
-
-
-表严肃
-https://biaoyansu.com/22.9
-
-
-B站kuangshen
-https://www.bilibili.com/
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Vue/" class="post-category">
-                                    Vue
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/07/31/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/07/22/take-by-control/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="take by control">
-                            
-                            <span class="card-title">take by control</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Hi I am YanfuI am taking back control for the blog…
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="服务器搭建（1）">
-                            
-                            <span class="card-title">服务器搭建（1）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-12-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2017/12/05/Centos-Nginx-configuration/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Centos_Nginx_configuration">
-                            
-                            <span class="card-title">Centos_Nginx_configuration</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                ##Nginx:
-nginx 是一个用C语言编写的静态服务器。我们可以用它来做反向代理。
-案例1：
-一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。
-例如全球都可以访问（当然天朝大不
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-12-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2017/08/13/2017-renew/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2017-renew">
-                            
-                            <span class="card-title">2017-renew</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                #2017,下半年小目标
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-08-13
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JVM学习">
-                            
-                            <span class="card-title">JVM学习</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                #一、运行时数据区域
-##程序计数器(Program Counter Register)1、线程私有 2、JAVA虚拟机规范中没有规定任何OutOfMemoryError
-##JAVA虚拟机栈（Java Virtual Machine St
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2017-08-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                扯犊子
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-        </div>
-    </article>
-
-</main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a class="left btn-floating btn-large disabled">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
+      <header class="article-header">
         
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Angular基础知识</a>
+    </h1>
+  
 
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
+      </header>
     
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>angular</p>
+<h4 id="angular-cli"><a href="#angular-cli" class="headerlink" title="angular cli"></a>angular cli</h4><p>安装 angular cli</p>
+<pre class="line-numbers language-shell"><code class="language-shell">npm install -g @angular/cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>卸载</p>
+<pre class="line-numbers language-shell"><code class="language-shell">npm uninstall -g @angular/cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="node-升级"><a href="#node-升级" class="headerlink" title="node 升级"></a>node 升级</h4><ol>
+<li>清除npm缓存</li>
+</ol>
+<pre><code>npm cache clean -f 
+</code></pre>
+<ol start="2">
+<li><p>安装n 模块</p>
+<pre class="line-numbers language-shell"><code class="language-shell">npm install -g n
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>升级node到稳定版本</p>
+<pre class="line-numbers language-shell"><code class="language-shell">n stable 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>查看 node的版本</p>
+<pre class="line-numbers language-shell"><code class="language-shell">node -v
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="Ng-ant-design"><a href="#Ng-ant-design" class="headerlink" title="Ng ant-design"></a>Ng ant-design</h4><p>引入 ant design</p>
+<pre class="line-numbers language-shell"><code class="language-shell">$ ng new PROJECT_NAME
+$ cd PROJECT_NAME
+$ npm install ng-zorro-antd --save
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h5 id="使用全部组件样式"><a href="#使用全部组件样式" class="headerlink" title="使用全部组件样式"></a>使用全部组件样式</h5><p>该配置将包含组件库的全部样式，如果只想使用某些组件请查看 <a target="_blank" rel="noopener" href="https://ng.ant.design/docs/getting-started/zh#%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F">使用特定组件样式</a> 配置。</p>
+<p>在 <code>angular.json</code> 中引入了</p>
+<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"node_modules/ng-zorro-antd/ng-zorro-antd.min.css"</span>
+  <span class="token punctuation">]</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 <code>style.css</code> 中引入预构建样式文件</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/ng-zorro-antd.min.css"</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/style/index.min.css"</span><span class="token punctuation">;</span></span> <span class="token comment" spellcheck="true">/* 引入基本样式 */</span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">"~ng-zorro-antd/button/style/index.min.css"</span><span class="token punctuation">;</span></span> <span class="token comment" spellcheck="true">/* 引入组件样式 */</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h5 id="引入模块组件"><a href="#引入模块组件" class="headerlink" title="引入模块组件"></a>引入模块组件</h5><p>以下面的 <code>NzButtonModule</code> 模块为例，先引入组件模块：</p>
+<pre class="line-numbers language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NgModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> NzButtonModule <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> AppComponent <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
 
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    AppComponent
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    NzButtonModule
+  <span class="token punctuation">]</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在模板中使用：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">nz-button</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>清除缓存</p>
+<pre class="line-numbers language-shell"><code class="language-shell"> npm cache clean -f
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
+      
     </div>
-</div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cl7cqfnbw0008tlujc5d4dddo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
 
+  
+    <article id="post-Docker的基本命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2022-08-03T13:58:18.000Z" itemprop="datePublished">2022-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Docker/">Docker</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Docker的基本命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Docker的基本命令"><a href="#Docker的基本命令" class="headerlink" title="Docker的基本命令"></a>Docker的基本命令</h5><p>启动docker</p>
+<pre class="line-numbers language-shell"><code class="language-shell"> $sudo systemctl start docker
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">$docker pull [image]
+$docker pull ubuntu
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h6 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h6><pre><code>docker run 
+</code></pre>
+<h6 id="查看所有的容器"><a href="#查看所有的容器" class="headerlink" title="查看所有的容器"></a>查看所有的容器</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker ps
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="查看所有的镜像"><a href="#查看所有的镜像" class="headerlink" title="查看所有的镜像"></a>查看所有的镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker images
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>删除所有的镜像</p>
+<pre class="line-numbers language-shell"><code class="language-shell">docker rmi $(docker images -q)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>删除所有的容器</p>
+<pre class="line-numbers language-shell"><code class="language-shell">docker rm $(docker ps -aq)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h5><h6 id="查看容器运行状态"><a href="#查看容器运行状态" class="headerlink" title="查看容器运行状态"></a>查看容器运行状态</h6><pre class="line-numbers language-shell"><code class="language-shell">列出所有的容器及其运行状态
+$ docker-compose ps   
+[root@happy test]# docker-compose ps
+     Name                    Command               State                          Ports                       
+--------------------------------------------------------------------------------------------------------------
+container_mysql   docker-entrypoint.sh --cha ...   Up      0.0.0.0:3306->3306/tcp,:::3306->3306/tcp, 33060/tcp
+container_redis   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp,:::6379->6379/tcp           
+nginx             /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80->80/tcp,:::80->80/tcp                   
+web               java -jar /app.jar --serve ...   Up      0.0.0.0:8080->8080/tcp,:::8080->8080/tcp           
+[root@happy test]# 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker-compose up -d 后台启动
+$ docker-compose up --build   build 并启动
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h6 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker-compose down
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="查看容器的信息"><a href="#查看容器的信息" class="headerlink" title="查看容器的信息"></a>查看容器的信息</h6><pre class="line-numbers language-shell"><code class="language-shell">[root@happy test]# docker inspect nginx
+  "IPAddress": "172.26.0.4",
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h6 id="查看liunx-本机IP"><a href="#查看liunx-本机IP" class="headerlink" title="查看liunx 本机IP"></a>查看liunx 本机IP</h6><pre class="line-numbers language-shell"><code class="language-shell">$ ifconfig
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="删除所有容器"><a href="#删除所有容器" class="headerlink" title="删除所有容器"></a>删除所有容器</h6><pre class="line-numbers language-shell"><code class="language-shell">docker rm $(docker ps -aq)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h6 id="删除所有的镜像"><a href="#删除所有的镜像" class="headerlink" title="删除所有的镜像"></a>删除所有的镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">docker rmi $(docker images -q)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h5><h6 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h6><pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">user</span> nginx<span class="token punctuation">;</span>
+<span class="token keyword">worker_processes</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">events</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">worker_connections</span>  <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token keyword">http</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    <span class="token keyword">include</span>       <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>mime<span class="token punctuation">.</span><span class="token keyword">types</span><span class="token punctuation">;</span>
+    <span class="token keyword">default_type</span>  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
+    <span class="token keyword">sendfile</span>        on<span class="token punctuation">;</span>
+    <span class="token keyword">keepalive_timeout</span>  <span class="token number">65</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+         <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>balance<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+
+    <span class="token keyword">upstream</span> balance<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+       <span class="token keyword">server</span> <span class="token number">172.17</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token punctuation">:</span><span class="token number">8080</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#docker的IP地址</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">include</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="查看docker的IP"><a href="#查看docker的IP" class="headerlink" title="查看docker的IP"></a>查看docker的IP</h6><pre class="line-numbers language-shell"><code class="language-shell">[root@happy test]# ip addr show docker0
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:7c:ab:6d:00 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:7cff:feab:6d00/64 scope link 
+       valid_lft forever preferred_lft forever
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Docker-教程"><a href="#Docker-教程" class="headerlink" title="Docker 教程"></a>Docker 教程</h4><p><a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP">https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP</a></p>
+<p>k8s -<a target="_blank" rel="noopener" href="https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45">https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="cl7cqfncb000ctlujfadn84jv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue 基础知识1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/" class="article-date">
+  <time datetime="2022-08-03T13:58:18.000Z" itemprop="datePublished">2022-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">Vue 基本知识1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><h5 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h5><table>
+<thead>
+<tr>
+<th>Vue官网</th>
+<th><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/">https://cn.vuejs.org/v2/guide/</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表严肃</td>
+<td><a target="_blank" rel="noopener" href="https://biaoyansu.com/22.9">https://biaoyansu.com/22.9</a></td>
+</tr>
+<tr>
+<td>B站kuangshen</td>
+<td><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18E411a7mC?p=13">https://www.bilibili.com/video/BV18E411a7mC?p=13</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="安装Webpack"><a href="#安装Webpack" class="headerlink" title="安装Webpack"></a>安装Webpack</h5><pre class="line-numbers language-shell"><code class="language-shell">npm install webpack -g
+npm install webpack-cli 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="脚手架创建项目"><a href="#脚手架创建项目" class="headerlink" title="脚手架创建项目"></a>脚手架创建项目</h5><pre class="line-numbers language-shell"><code class="language-shell">vue create myproject
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>项目的结构分析</p>
+<ul>
+<li>src</li>
+<li></li>
+</ul>
+<h5 id="Vue基础"><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h5><h6 id="props"><a href="#props" class="headerlink" title="props"></a>props</h6><pre class="line-numbers language-javascript"><code class="language-javascript">## 配置 props 
+   功能：接收外部传入的数据
+     <span class="token number">1</span><span class="token punctuation">.</span> 传递数据
+       <span class="token operator">&lt;</span>Student name<span class="token operator">=</span><span class="token string">"Zhang San"</span><span class="token operator">/</span><span class="token operator">></span>
+     <span class="token number">2</span><span class="token punctuation">.</span> 接收数据
+        <span class="token number">2.1</span> 第一种方式
+             props<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'gae'</span><span class="token punctuation">]</span>
+        <span class="token number">2.3</span> 第二种方式
+             props<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+               name<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+               age<span class="token punctuation">:</span> Number
+               gender<span class="token punctuation">:</span> String
+             <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token number">2.4</span> 第三种方式
+            props<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+              name<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                type<span class="token punctuation">:</span> String<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//限制数据类型</span>
+                required<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">//这个字段必传</span>
+              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+              age<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+                required<span class="token punctuation">:</span> <span class="token boolean">false</span>
+              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+              gender<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+                <span class="token keyword">default</span><span class="token punctuation">:</span><span class="token string">'男'</span>
+              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="Vue的件事处理"><a href="#Vue的件事处理" class="headerlink" title="Vue的件事处理"></a>Vue的件事处理</h6><pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">></span>点我<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+  <span class="token operator">&lt;</span>button v<span class="token operator">-</span>on<span class="token punctuation">:</span>click<span class="token operator">=</span><span class="token string">"showInfo2"</span> <span class="token operator">></span>点我<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>、
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>MyAction Vue component </p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>button v<span class="token operator">-</span>on<span class="token punctuation">:</span>click<span class="token operator">=</span><span class="token string">"showInfo"</span><span class="token operator">></span>点我<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  name<span class="token punctuation">:</span> <span class="token string">"MyAction"</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"点我 点我！"</span><span class="token punctuation">)</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"click...."</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="Vue-的组件"><a href="#Vue-的组件" class="headerlink" title="Vue 的组件"></a>Vue 的组件</h6><p>new VueComponent(options)</p>
+<h6 id="Vue-ElementUI"><a href="#Vue-ElementUI" class="headerlink" title="Vue- ElementUI"></a>Vue- ElementUI</h6><p>安装</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i element-ui 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装指定版本的</p>
+<pre><code>npm i element-ui@2.11.0
+</code></pre>
+<p>使用</p>
+<p>在main js 里引入</p>
+<pre><code>import ElementUI from &#39;element-ui&#39;;
+import &#39;element-ui/lib/theme-chalk/index.css&#39;;
+</code></pre>
+<p>注册</p>
+<pre><code>Vue.use(ElementUI);
+</code></pre>
+<p>Element UI 最新版本的依赖 table不显示（显示空白)</p>
+<p>降低版本到  “element-ui”: “^2.11.0”,</p>
+<pre class="line-numbers language-json"><code class="language-json"> <span class="token property">"dependencies"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"axios"</span><span class="token operator">:</span> <span class="token string">"^0.24.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"core-js"</span><span class="token operator">:</span> <span class="token string">"^3.6.5"</span><span class="token punctuation">,</span>
+    <span class="token property">"element-ui"</span><span class="token operator">:</span> <span class="token string">"^2.11.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"vue"</span><span class="token operator">:</span> <span class="token string">"^2.6.11"</span><span class="token punctuation">,</span>
+    <span class="token property">"vue-axios"</span><span class="token operator">:</span> <span class="token string">"^3.4.0"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="Vue-Axios-网络请求"><a href="#Vue-Axios-网络请求" class="headerlink" title="Vue-Axios 网络请求"></a>Vue-Axios 网络请求</h6><p>how to install</p>
+<p>ECS 6 Module</p>
+<pre><code>npm install --save axios vue-axios
+</code></pre>
+<p>Import libraries in entry file:</p>
+<pre class="line-numbers language-vue"><code class="language-vue">// import Vue from 'vue'   // in Vue 2
+import * as Vue from 'vue' // in Vue 3
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Usage in Vue 2:</p>
+<pre><code>Vue.use(VueAxios, axios)
+</code></pre>
+<p>Usage in Vue 3:</p>
+<pre><code>const app = Vue.createApp(...)
+app.use(VueAxios, axios)
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/" data-id="cl7cqfnch000ftlujgs4c4pau" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/07/31/hello-world/" class="article-date">
+  <time datetime="2022-07-31T13:53:57.259Z" itemprop="datePublished">2022-07-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/07/31/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/07/31/hello-world/" data-id="cl7cqfnbt0005tluj8mk5a8ib" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-take-by-control" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/07/22/take-by-control/" class="article-date">
+  <time datetime="2022-07-22T08:22:59.000Z" itemprop="datePublished">2022-07-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/07/22/take-by-control/">take by control</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Hi-I-am-Yanfu"><a href="#Hi-I-am-Yanfu" class="headerlink" title="Hi I am Yanfu"></a>Hi I am Yanfu</h3><p>I am taking back control for the blog…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2022/07/22/take-by-control/" data-id="cl7cqfnbv0007tluj12bpb8e4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-服务器搭建（1）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/" class="article-date">
+  <time datetime="2017-12-06T14:08:30.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/">服务器搭建（1）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2017/12/06/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%881%EF%BC%89/" data-id="cl7cqfncl000htlujftks9bsd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Centos-Nginx-configuration" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/05/Centos-Nginx-configuration/" class="article-date">
+  <time datetime="2017-12-05T14:08:20.000Z" itemprop="datePublished">2017-12-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/05/Centos-Nginx-configuration/">Centos_Nginx_configuration</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Nginx:</p>
+<p>nginx 是一个用C语言编写的静态服务器。<br>我们可以用它来做反向代理。</p>
+<p>案例1：</p>
+<p>一个网站的访问量很大，如果很大的数据量都用一台服务器来处理，那么就会导致服务器主机压力很大，甚至导致奔溃。</p>
+<p>例如全球都可以访问（当然天朝大不认还是上不了的..） <a target="_blank" rel="noopener" href="http://www.google.com/">www.google.com</a> ，那么就可以用nginx做分发。在<a target="_blank" rel="noopener" href="http://www.google.com/">www.google.com</a> 解析一台主机（例如110.110.100.23）, 当请求发到该主机的时候， 通过nginx分发到不同的其他服务器主机上， 这样就缓解了当前主机的压力。</p>
+<p>案例2:</p>
+<p>域名解析只能解析到ip， 不能解析到对应到ip主机对应的某一个端口号<br>所以你在主机上跑了一个应用是非80端口的，那么你访问你的应用的时候就要域名加上端口才能访问到。</p>
+<p>例如:<a href="http://www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。">www.daliandaxue.cn:8443,那么你想隐藏掉这个端口，就可以用Nginx反向代理来做。</a></p>
+<p>###安装Nginx</p>
+<p>####环境<br>操作系统Centos7.2</p>
+<p>安装命令:yum install nginx</p>
+<p>启动命令:nginx</p>
+<p>优雅启动命令:nginx -s reload</p>
+<p>测试启动情况：nginx -t</p>
+<p>重启nginx：nginx -s reload</p>
+<p>针对案例2,需要添加一些配置</p>
+<p>在/etc/nginx/nginx.conf 有两个关键的地方:</p>
+<p>user nginx; 改为 nginx root;<br>若不改动， 会在你启动nginx的时候出现权限不允许的error。</p>
+<p>include /etc/nginx/conf.d/*.conf;<br>这个inclde的意思就是你在conf.d 文件下的所有的 *.conf 文件， 都会在nginx启动的时候加载进去。</p>
+<p>如果在/etc/nginx/下没有conf.d 文件夹，你可以创建conf.d文件夹。</p>
+<p>下创建一个自己的.conf配置文件， 或者你可以直接修改/etc/nginx/nginx.conf文件。</p>
+<p>我选择直接修改nginx.conf这个文件</p>
+<p>修改后的nginx.conf文件（我添加了HTTPS 配置）<br>SSL configuration:</p>
+<p>user root;<br>worker_processes auto;<br>error_log /var/log/nginx/error.log;<br>pid /run/nginx.pid;</p>
+<p>include /usr/share/nginx/modules/*.conf;</p>
+<p>events {<br>worker_connections 1024;<br>}</p>
+<p>http {<br>log_format  main  ‘$remote_addr - $remote_user [$time_local] “$request” ‘<br>  ‘$status $body_bytes_sent “$http_referer” ‘<br>  ‘“$http_user_agent” “$http_x_forwarded_for”‘;</p>
+<p>access_log  /var/log/nginx/access.log  main;</p>
+<p>sendfileon;<br>tcp_nopush  on;<br>tcp_nodelay on;<br>keepalive_timeout   65;<br>types_hash_max_size 2048;</p>
+<p>include /etc/nginx/mime.types;<br>default_typeapplication/octet-stream;</p>
+<p>include /etc/nginx/conf.d/*.conf;</p>
+<p>server {<br>listen   80 default_server;<br>listen   [::]:80 default_server;<br>server_name  <a target="_blank" rel="noopener" href="http://www.daliandaxue.cn/">www.daliandaxue.cn</a>;<br>root /usr/share/nginx/html;</p>
+<p>include /etc/nginx/default.d/*.conf;</p>
+<p>location / {<br>        rewrite ^(.*) https://$server_name$1 permanent;<br>}</p>
+<p>error_page 404 /404.html;<br>location = /40x.html {<br>}</p>
+<p>error_page 500 502 503 504 /50x.html;<br>location = /50x.html {<br>}<br>}</p>
+<p>   server {<br>   listen   443 ssl http2 default_server;<br>   listen   [::]:443 ssl http2 default_server;<br>server_name  <a target="_blank" rel="noopener" href="http://www.daliandaxue.cn/">www.daliandaxue.cn</a>;<br>root /usr/share/nginx/html;</p>
+<pre><code>    ssl on;
+    ssl_certificate /etc/nginx/cert/214327484730823.pem;
+    ssl_certificate_key /etc/nginx/cert/214327484730823.key;
+    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+    ssl_prefer_server_ciphers on;
+</code></pre>
+<p>include /etc/nginx/default.d/*.conf;</p>
+<p>location / {<br>            proxy_pass  <a target="_blank" rel="noopener" href="http://localhost:8443/">http://localhost:8443</a>;<br>            proxy_set_header Host $host;<br>            proxy_set_header X-Real-IP $remote_addr;<br>            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br>            proxy_redirect off;<br>            <code>### Most PHP, Python, Rails, Java App can use this header -&gt; https ###</code><br>            proxy_set_header X-Forwarded-Proto  $scheme;<br>}</p>
+<pre><code>error_page 404 /404.html;
+location = /40x.html &#123;
+&#125;
+
+error_page 500 502 503 504 /50x.html;
+location = /50x.html &#123;
+&#125;
+</code></pre>
+<p>}<br>}<br>配置完nginx.conf 文件之后，执行nginx -s reload 就可以通过域名直接访问你的应用了。<br>其中的原理就是nginx 监听了服务器主机的80端口。 当有请求通过你设置server_name 访问时，nginx就可以把该请求location 到你的应用上。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2017/12/05/Centos-Nginx-configuration/" data-id="cl7cqfnbr0003tluj1rt82faz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2017-renew" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/13/2017-renew/" class="article-date">
+  <time datetime="2017-08-13T14:08:10.000Z" itemprop="datePublished">2017-08-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/13/2017-renew/">2017-renew</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#2017,下半年小目标</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2017/08/13/2017-renew/" data-id="cl7cqfnbo0001tluj3xwrhfa4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JVM学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2017-08-12T14:07:58.000Z" itemprop="datePublished">2017-08-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/">JVM学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#一、运行时数据区域</p>
+<p>##程序计数器(Program Counter Register)<br>1、线程私有 2、JAVA虚拟机规范中没有规定任何OutOfMemoryError</p>
+<p>##JAVA虚拟机栈（Java Virtual Machine Stacks）<br>1、线程私有<br>2、存储局部变量表<br>3、操作数栈<br>4、动态链接<br>5、方法出口</p>
+<p>##本地方法栈</p>
+<p>##JAVA 堆</p>
+<p>##方法去</p>
+<p>##运行时常量池</p>
+<p>##直接内存</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2017/08/12/JVM%E5%AD%A6%E4%B9%A0/" data-id="cl7cqfnbx0009tlujbnyy46s4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-解决win7电脑网络连接异常的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/13/%E8%A7%A3%E5%86%B3win7%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2016-09-13T14:07:40.000Z" itemprop="datePublished">2016-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/13/%E8%A7%A3%E5%86%B3win7%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98/">解决win7电脑网络连接异常的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.首先，打开电脑,网络连接图标出现红色的叉子,说明网络适配器有问题<br>2.打开网络共享中心-&gt;更改是配置设置-&gt;看到WLAN(或者叫无线连接)和本地连接。<br>使用本地图片<br>使用本地图片</p>
+<p>3.先右键选择其中一个本地连接或者无线连接禁用它在启用<br>4.如果还是不好使的话,就打开设备管理器,查看一下网络设配器选项,下面的驱动是不是有成黄色感叹号的，有的话右键选中它禁用然后在启用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://godweiyang.com/2016/09/13/%E8%A7%A3%E5%86%B3win7%E7%94%B5%E8%84%91%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cl7cqfnci000gtlujdolkgsp5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li></ul>
+    </div>
+  </div>
+
+
+  
     
 
-    <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2019-2022</span>
-            
-            <a href="/about" target="_blank">扯犊子</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-                
-            
-            
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
-            
-            <br>
-
-            <!-- 运行天数提醒. -->
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li></ul>
     </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/">代码高亮测试</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Angular基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Docker的基本命令</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">Vue 基本知识1</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 韦阳<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
     </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-    <!-- 雪花特效 -->
-    
 
-    <!-- 鼠标星星特效 -->
-    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
-    
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-    <!-- Baidu Analytics -->
 
-    <!-- Baidu Push -->
 
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+<script src="/js/script.js"></script>
 
-    
 
-    
 
-    <!--腾讯兔小巢-->
-    
-    
 
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
+  </div>
 </body>
-
 </html>
