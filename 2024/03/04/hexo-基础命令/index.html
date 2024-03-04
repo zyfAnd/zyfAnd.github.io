@@ -4,16 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Docker的基本命令, 扯犊子">
-    <meta name="description" content="Docker的基本命令启动docker
- $sudo systemctl start docker
+    <meta name="keywords" content="hexo 基础命令, 扯犊子">
+    <meta name="description" content="基础命令
+hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
 
-获取镜像$docker pull [image]
-$docker pull ubuntu
-
-启动容器docker run 
-
-查看所有的容">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,7 +25,7 @@ $docker pull ubuntu
 
     
 
-    <title>Docker的基本命令 | 扯犊子</title>
+    <title>hexo 基础命令 | 扯犊子</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -318,12 +316,12 @@ $docker pull ubuntu
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Docker的基本命令</h1>
+                    <h1 class="description center-align post-title">hexo 基础命令</h1>
                 </div>
             </div>
         </div>
@@ -444,15 +442,6 @@ $docker pull ubuntu
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Docker/" class="post-category">
-                                Docker
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -460,7 +449,7 @@ $docker pull ubuntu
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-03
+                    2024-03-04
                 </div>
                 
 
@@ -481,84 +470,12 @@ $docker pull ubuntu
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="Docker的基本命令"><a href="#Docker的基本命令" class="headerlink" title="Docker的基本命令"></a>Docker的基本命令</h5><p>启动docker</p>
-<pre class="line-numbers language-shell"><code class="language-shell"> $sudo systemctl start docker
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h6 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">$docker pull [image]
-$docker pull ubuntu
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h6 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h6><pre><code>docker run 
-</code></pre>
-<h6 id="查看所有的容器"><a href="#查看所有的容器" class="headerlink" title="查看所有的容器"></a>查看所有的容器</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker ps
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h6 id="查看所有的镜像"><a href="#查看所有的镜像" class="headerlink" title="查看所有的镜像"></a>查看所有的镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker images
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>删除所有的镜像</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker rmi $(docker images -q)
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>删除所有的容器</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker rm $(docker ps -aq)
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h5><h6 id="查看容器运行状态"><a href="#查看容器运行状态" class="headerlink" title="查看容器运行状态"></a>查看容器运行状态</h6><pre class="line-numbers language-shell"><code class="language-shell">列出所有的容器及其运行状态
-$ docker-compose ps   
-[root@happy test]# docker-compose ps
-     Name                    Command               State                          Ports                       
---------------------------------------------------------------------------------------------------------------
-container_mysql   docker-entrypoint.sh --cha ...   Up      0.0.0.0:3306->3306/tcp,:::3306->3306/tcp, 33060/tcp
-container_redis   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp,:::6379->6379/tcp           
-nginx             /docker-entrypoint.sh ngin ...   Up      0.0.0.0:80->80/tcp,:::80->80/tcp                   
-web               java -jar /app.jar --serve ...   Up      0.0.0.0:8080->8080/tcp,:::8080->8080/tcp           
-[root@happy test]# 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h6 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker-compose up -d 后台启动
-$ docker-compose up --build   build 并启动
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h6 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h6><pre class="line-numbers language-shell"><code class="language-shell">$ docker-compose down
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h6 id="查看容器的信息"><a href="#查看容器的信息" class="headerlink" title="查看容器的信息"></a>查看容器的信息</h6><pre class="line-numbers language-shell"><code class="language-shell">[root@happy test]# docker inspect nginx
-  "IPAddress": "172.26.0.4",
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h6 id="查看liunx-本机IP"><a href="#查看liunx-本机IP" class="headerlink" title="查看liunx 本机IP"></a>查看liunx 本机IP</h6><pre class="line-numbers language-shell"><code class="language-shell">$ ifconfig
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h6 id="删除所有容器"><a href="#删除所有容器" class="headerlink" title="删除所有容器"></a>删除所有容器</h6><pre class="line-numbers language-shell"><code class="language-shell">docker rm $(docker ps -aq)
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h6 id="删除所有的镜像"><a href="#删除所有的镜像" class="headerlink" title="删除所有的镜像"></a>删除所有的镜像</h6><pre class="line-numbers language-shell"><code class="language-shell">docker rmi $(docker images -q)
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h5><h6 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h6><pre class="line-numbers language-nginx"><code class="language-nginx"><span class="token keyword">user</span> nginx<span class="token punctuation">;</span>
-<span class="token keyword">worker_processes</span>  <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">events</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">worker_connections</span>  <span class="token number">1024</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-<span class="token keyword">http</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token keyword">include</span>       <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>mime<span class="token punctuation">.</span><span class="token keyword">types</span><span class="token punctuation">;</span>
-    <span class="token keyword">default_type</span>  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
-    <span class="token keyword">sendfile</span>        on<span class="token punctuation">;</span>
-    <span class="token keyword">keepalive_timeout</span>  <span class="token number">65</span><span class="token punctuation">;</span>
-
-
-    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
-        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-         <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>balance<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-
-    <span class="token keyword">upstream</span> balance<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-       <span class="token keyword">server</span> <span class="token number">172.17</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token punctuation">:</span><span class="token number">8080</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">#docker的IP地址</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token keyword">include</span> <span class="token operator">/</span>etc<span class="token operator">/</span>nginx<span class="token operator">/</span>conf<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>conf<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h6 id="查看docker的IP"><a href="#查看docker的IP" class="headerlink" title="查看docker的IP"></a>查看docker的IP</h6><pre class="line-numbers language-shell"><code class="language-shell">[root@happy test]# ip addr show docker0
-3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
-    link/ether 02:42:7c:ab:6d:00 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:7cff:feab:6d00/64 scope link 
-       valid_lft forever preferred_lft forever
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Docker-教程"><a href="#Docker-教程" class="headerlink" title="Docker 教程"></a>Docker 教程</h4><p><a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP">https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP</a></p>
-<p>k8s -<a target="_blank" rel="noopener" href="https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45">https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45</a></p>
+                <p>基础命令</p>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo n <span class="token operator">==</span> hexo new
+hexo g <span class="token operator">==</span> hexo generate
+hexo s <span class="token operator">==</span> hexo server
+hexo d <span class="token operator">==</span> hexo deploy
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -585,7 +502,7 @@ $ docker-compose up --build   build 并启动
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zyfand.github.io/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">https://zyfand.github.io/2022/08/03/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</a>
+                    <a href="https://zyfand.github.io/2024/03/04/hexo-%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">https://zyfand.github.io/2024/03/04/hexo-%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -794,58 +711,18 @@ $ docker-compose up --build   build 并启动
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/08/03/Angular%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/2024/03/04/hexo-%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Angular基础知识">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="hexo 基础命令">
                         
-                        <span class="card-title">Angular基础知识</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-03
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Angular/" class="post-category">
-                                    Angular
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/08/03/Vue%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%861/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Vue 基本知识1">
-                        
-                        <span class="card-title">Vue 基本知识1</span>
+                        <span class="card-title">hexo 基础命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -856,14 +733,52 @@ $ docker-compose up --build   build 并启动
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            扯犊子
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/08/08/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E6%B5%8B%E8%AF%95/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="代码高亮测试">
+                        
+                        <span class="card-title">代码高亮测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vue/" class="post-category">
-                                    Vue
+                            <a href="/categories/test/" class="post-category">
+                                    test
                                 </a>
                             
                             
